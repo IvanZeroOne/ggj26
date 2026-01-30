@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2dba40e37501a6849bc6e0c42cce2dff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Prefabs/FullMixer/MusicChannel.asset
+  uploadId: 818786

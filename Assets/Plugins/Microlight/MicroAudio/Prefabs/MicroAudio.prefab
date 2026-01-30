@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &575442273508186282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575442273508186281}
+  - component: {fileID: 735946058406857287}
+  m_Layer: 0
+  m_Name: MicroAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575442273508186281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575442273508186282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735946058406857287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575442273508186282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084498ab6a390bd4fb9c56fd7952d8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: add55b5b493741842be8b1d64a9c0930, type: 2}
+  _masterChannelData: {fileID: 11400000, guid: 11dd567a2ff296146bcdd68646420333, type: 2}
+  _musicChannelData: {fileID: 11400000, guid: 2dba40e37501a6849bc6e0c42cce2dff, type: 2}
+  _ambienceChannelData: {fileID: 11400000, guid: b87a503663bf5ae45945e6df31598454, type: 2}
+  _soundsChannelData: {fileID: 11400000, guid: 4bbd19b1a1d4c614f8e3aae9a32be8e8, type: 2}
+  _sfxChannelData: {fileID: 11400000, guid: 7a97ce3dbdd2bb24d9b9d8cf66be0f85, type: 2}
+  _uiChannelData: {fileID: 11400000, guid: 037ad2f5174e99a478b2d57ff0b2139b, type: 2}
+  _dialogueChannelData: {fileID: 11400000, guid: e28248ba15e56cb4cbfb95443435588b, type: 2}
+  _maxSoundSources: 128
+  _maxInstancesOfSameClip: 0
+  _prewarmPoolAmount: 5

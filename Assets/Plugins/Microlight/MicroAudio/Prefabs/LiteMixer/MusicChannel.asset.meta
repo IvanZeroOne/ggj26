@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 382bac2fb6cc18d47905c6f6a641111e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Prefabs/LiteMixer/MusicChannel.asset
+  uploadId: 818786

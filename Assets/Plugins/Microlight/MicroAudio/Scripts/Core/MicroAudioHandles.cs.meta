@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c34572dbc79c4c6c88ce5cdbc3d3e42e
+timeCreated: 1762179275
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Scripts/Core/MicroAudioHandles.cs
+  uploadId: 818786

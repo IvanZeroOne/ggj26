@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11baf1f281c64e05aaee8ccc105b28a, type: 3}
+  m_Name: MasterChannel
+  m_EditorClassIdentifier: 
+  _mixerGroup: {fileID: 24300002, guid: e82935d4d6d001940b56e3570092965d, type: 2}
+  _volumeString: MasterVolume
+  _volumePlayerPrefsKey: microAudioMasterVolume
+  _mutePlayerPrefsKey: microAudioMasterMute

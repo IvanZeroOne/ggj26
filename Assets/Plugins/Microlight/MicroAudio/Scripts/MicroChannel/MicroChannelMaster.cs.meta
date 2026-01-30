@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 015989bd3b6ec4165a445e6dcd03bcc8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Scripts/MicroChannel/MicroChannelMaster.cs
+  uploadId: 818786

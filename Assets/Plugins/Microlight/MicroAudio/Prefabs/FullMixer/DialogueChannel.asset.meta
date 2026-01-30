@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e28248ba15e56cb4cbfb95443435588b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Prefabs/FullMixer/DialogueChannel.asset
+  uploadId: 818786

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11baf1f281c64e05aaee8ccc105b28a, type: 3}
+  m_Name: DialogueChannel
+  m_EditorClassIdentifier: 
+  _mixerGroup: {fileID: 142512495485154628, guid: add55b5b493741842be8b1d64a9c0930, type: 2}
+  _volumeString: DialogueVolume
+  _volumePlayerPrefsKey: microAudioDialogueVolume
+  _mutePlayerPrefsKey: microAudioDialogueMute

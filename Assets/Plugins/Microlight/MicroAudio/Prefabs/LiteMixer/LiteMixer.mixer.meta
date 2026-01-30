@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e82935d4d6d001940b56e3570092965d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 24100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272359
+  packageName: MicroAudio - Audio manager
+  packageVersion: 2.1.0
+  assetPath: Assets/Microlight/MicroAudio/Prefabs/LiteMixer/LiteMixer.mixer
+  uploadId: 818786

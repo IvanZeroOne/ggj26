@@ -1,0 +1,6 @@
+using UnityEngine;
+
+public class Phone : MonoBehaviour
+{
+    [SerializeField] PhoneVisuals _phoneVisuals;
+}

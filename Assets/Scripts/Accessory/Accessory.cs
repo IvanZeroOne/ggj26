@@ -36,6 +36,7 @@ public class Accessory : MonoBehaviour
             {
                 transform.position = hit.point;
                 PositionAttachment(holder);
+                holder.AttachAttachment(_attachable);
             }
         }
     }

@@ -10,7 +10,6 @@ public class AttachmentHolder : MonoBehaviour
 
     public void AttachAttachment(Attachable attachable)
     {
-        attachable.transform.SetParent(_attachmentsHolder);
-        Debug.Log($"Hit AttachmentHolder: {gameObject.name}");
+        attachable.Parent.transform.SetParent(_attachmentsHolder);
     }
 }

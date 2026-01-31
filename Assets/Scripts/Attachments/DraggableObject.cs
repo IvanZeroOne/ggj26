@@ -60,7 +60,7 @@ public class DraggableObject : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(pointerData.position);
         if (Physics.Raycast(ray, out RaycastHit hit, MAX_RAY_DISTANCE))
         {
-            if (hit.collider.TryGetComponent(out holder))
+            if (hit.collider.transform.parent.TryGetComponent(out holder))
             {
                 transform.position = hit.point;
                 _attachable.PositionAttachment(holder);

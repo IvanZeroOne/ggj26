@@ -35,7 +35,7 @@ public class InteractableObject : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     // Events
     public event Action OnHoverChanged;
-    public event Action OnDragStarted;
+    public event Action<PointerEventData> OnDragStarted;
     public event Action<PointerEventData> OnDragEnded;
     public event Action<PointerEventData> OnDragStep;
     public event Action OnClick;
@@ -107,7 +107,7 @@ public class InteractableObject : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (_draggable == false) return;
         if (Interactable == false) return;
         BeingDragged = true;
-        OnDragStarted?.Invoke();
+        OnDragStarted?.Invoke(eventData);
 
         if (_activeWhileDragged == false && _collider != null)
         {

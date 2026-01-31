@@ -6,6 +6,7 @@ public class Phone : MonoBehaviour
     [Header("Phone")]
     [SerializeField] Transform _caseHolder;
     [SerializeField] Animator _phoneAnimator;
+    [SerializeField] PhoneRotator _phoneRotator;
     [Header("Phone Screen")]
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
@@ -19,6 +20,7 @@ public class Phone : MonoBehaviour
     public void Init()
     {
         _caseHolder.DestroyAllChildren();
+        _phoneRotator.Init();
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)

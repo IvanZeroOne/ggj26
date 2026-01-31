@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,4 +13,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
         _draggingController = new DraggingController();
     }
+
+    public List<CasePatternVariantSO> CasePatternVariants;
 }

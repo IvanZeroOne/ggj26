@@ -4,7 +4,7 @@ public class PhoneCase : MonoBehaviour, IAttachmentHolder
 {
     [SerializeField] Collider _collider;
     [SerializeField] Transform _attachmentsHolder;
-    [SerializeField] Transform _caseVisuals;
+    [SerializeField] Transform _caseHolder;
 
     // ---------- IAttachmentHolder ----------
     public Collider Collider => _collider;

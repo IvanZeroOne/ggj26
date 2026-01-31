@@ -11,6 +11,7 @@ public class CaseSelectorController : MonoBehaviour
         if (_caseSelectors.Count != _caseVariants.Count)
         {
             Debug.LogError("Not the same number of case selectors and variants");
+            return;
         }
 
         for (int i = 0; i < _caseSelectors.Count; i++)

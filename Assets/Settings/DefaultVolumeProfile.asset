@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 0.98328155, z: 0.9137726, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 0.9012306, z: 0.9728898, w: 0.15535569}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 0.91399634, z: 0.9174162, w: -0.54783326}
 --- !u!114 &-8270506406425502121
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -97,13 +97,13 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   quality:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   clamp:
     m_OverrideState: 1
     m_Value: 0.05
@@ -161,10 +161,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   contrast:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 36.2
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.307
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -363,13 +363,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 0.1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.784
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -377,6 +377,9 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
+    m_OverrideState: 1
+    m_Value: 1
+  filter:
     m_OverrideState: 1
     m_Value: 0
   filter:
@@ -390,7 +393,7 @@ MonoBehaviour:
     m_Value: 6
   dirtTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 8931649119140877714, guid: 892014cf8c64881eab911e7c61baa716, type: 3}
     dimension: 1
   dirtIntensity:
     m_OverrideState: 1
@@ -483,10 +486,10 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 5
   tintColor:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 1, g: 0.9103774, b: 0.9131521, a: 1}
   bloomMip:
     m_OverrideState: 1
     m_Value: 1
@@ -504,7 +507,7 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1}
   samples:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   sampleDimmer:
     m_OverrideState: 1
     m_Value: 0.5
@@ -513,10 +516,10 @@ MonoBehaviour:
     m_Value: 1
   startingPosition:
     m_OverrideState: 1
-    m_Value: 1.25
+    m_Value: 1.086
   scale:
     m_OverrideState: 1
-    m_Value: 1.5
+    m_Value: 4
   streaksIntensity:
     m_OverrideState: 1
     m_Value: 0
@@ -585,7 +588,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 4
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -597,6 +600,24 @@ MonoBehaviour:
           value: 0
           inSlope: 1
           outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.3115942
+          value: 0.21827412
+          inSlope: 0.66363853
+          outSlope: 0.66363853
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.7173913
+          value: 0.74111676
+          inSlope: 0.9160486
+          outSlope: 0.9160486
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -855,7 +876,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.147
 --- !u!114 &6940869943325143175
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -890,13 +911,13 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.228
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.185
   rounded:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &7518938298396184218
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -912,7 +933,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.181
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1

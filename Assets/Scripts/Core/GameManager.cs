@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
     public static DraggingController DraggingController => Instance._draggingController;
     DraggingController _draggingController;
 
-    public static Phone Phone => Instance._phone;
-
     [Header("Controllers")]
     [SerializeField] Phone _phone;
     [SerializeField] CaseSelectorController _caseSelectorController;
+    [SerializeField] CasePatternSelectorController _casePatternSelectorController;
+
+    public static Phone Phone => Instance._phone;
 
     public static GameManager Instance { get; private set; }
 
@@ -24,5 +25,6 @@ public class GameManager : MonoBehaviour
     {
         _phone.Init();
         _caseSelectorController.Init();
+        _casePatternSelectorController.Init();
     }
 }

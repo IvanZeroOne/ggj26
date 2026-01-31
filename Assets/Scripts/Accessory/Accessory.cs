@@ -71,7 +71,6 @@ public class Accessory : MonoBehaviour
                 _attachableCollider, myPos, myRot,
                 out Vector3 dir, out float dist))
         {
-            Debug.Log($"dir: {dir}, dist: {dist}");
             Vector3 delta = -dir * (dist + skin);
             _attachable.Parent.position += delta;
         }

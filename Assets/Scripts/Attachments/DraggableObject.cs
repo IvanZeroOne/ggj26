@@ -6,15 +6,23 @@ public class DraggableObject : MonoBehaviour
 {
     [SerializeField] InteractableObject _interactable;
 
+    Camera _camera;
+    IAttachable _attachable;
+
     public event Action DragStartedEvent;
-    public event Action<PointerEventData> DragEndedEvent;
+    public event Action DragEndedEvent;
     public event Action<PointerEventData> DragStepEvent;
+
+    const float MAX_RAY_DISTANCE = 1000f;
 
     public void Init()
     {
         _interactable.OnDragStarted += OnStartedDrag;
         _interactable.OnDragEnded += OnEndedDrag;
         _interactable.OnDragStep += OnDragStep;
+
+        _camera = Camera.main;
+        _attachable = GetComponent<IAttachable>();
     }
 
     // ---------- Dragging ----------
@@ -28,13 +36,37 @@ public class DraggableObject : MonoBehaviour
 
     void OnEndedDrag(PointerEventData pointerData)
     {
-        DragEndedEvent?.Invoke(pointerData);
+        if (_attachable != null)
+        {
+            bool positionedSuccessfully = PositionAttachable(pointerData, out AttachmentHolder holder);
+            if (positionedSuccessfully) _attachable.AttachAttachment(holder);
+            else _attachable.FailedAttachment();
+        }
+        DragEndedEvent?.Invoke();
         GameManager.DraggingController.RemoveDraggedObject();
     }
 
     void OnDragStep(PointerEventData pointerData)
     {
         if(GameManager.DraggingController.DraggedObject == null) return;
+        PositionAttachable(pointerData, out _);
         DragStepEvent?.Invoke(pointerData);
+    }
+
+    bool PositionAttachable(PointerEventData pointerData, out AttachmentHolder holder)
+    {
+        holder = null;
+        if (_attachable == null) return false;
+        Ray ray = _camera.ScreenPointToRay(pointerData.position);
+        if (Physics.Raycast(ray, out RaycastHit hit, MAX_RAY_DISTANCE))
+        {
+            if (hit.collider.TryGetComponent(out holder))
+            {
+                transform.position = hit.point;
+                _attachable.PositionAttachment(holder);
+                return true;
+            }
+        }
+        return false;
     }
 }

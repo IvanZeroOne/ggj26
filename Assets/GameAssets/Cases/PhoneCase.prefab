@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 680236970309660265}
   - component: {fileID: 5051622594064032072}
+  - component: {fileID: 5017042538961594722}
   m_Layer: 0
-  m_Name: CasePrefab
+  m_Name: PhoneCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +47,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93598833d8274cf59272a4cebd126308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Case
-  _attachmentHolder: {fileID: 4694661482897494641}
+  _attachmentHolder: {fileID: 5017042538961594722}
   _caseVisuals: {fileID: 8874544390832649519}
+--- !u!114 &5017042538961594722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136867212755846483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95405f1e7df42cea2b347286333bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttachmentHolder
+  _attachmentsHolder: {fileID: 7406511457333937126}
+  Collider: {fileID: 5835167632112187861}
 --- !u!1 &1579601479996638701
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +106,6 @@ GameObject:
   - component: {fileID: 3518694497805512559}
   - component: {fileID: 6650593939476528033}
   - component: {fileID: 5835167632112187861}
-  - component: {fileID: 4694661482897494641}
   m_Layer: 0
   m_Name: CaseVisuals
   m_TagString: Untagged
@@ -108,7 +122,7 @@ Transform:
   m_GameObject: {fileID: 4805678623974026015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.043, y: 0.407, z: -0}
+  m_LocalPosition: {x: 0.043, y: 0.407, z: 0}
   m_LocalScale: {x: 0.05, y: 0.6881699, z: 0.48311}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,17 +206,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4694661482897494641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4805678623974026015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95405f1e7df42cea2b347286333bdd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttachmentHolder
-  _parent: {fileID: 680236970309660265}
-  _attachmentsHolder: {fileID: 7406511457333937126}

@@ -4,4 +4,9 @@ public class Phone : MonoBehaviour
 {
     [SerializeField] PhoneVisuals _phoneVisuals;
     [SerializeField] Transform _caseHolder;
+
+    public void EquipCase(CaseVariantSO caseVariantSO)
+    {
+
+    }
 }

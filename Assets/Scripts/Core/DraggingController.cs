@@ -1,8 +1,8 @@
 public class DraggingController
 {
-    public IDraggable DraggedObject { get; private set; }
+    public DraggableObject DraggedObject { get; private set; }
 
-    public void SetDraggedObject(IDraggable draggable)
+    public void SetDraggedObject(DraggableObject draggable)
     {
         DraggedObject = draggable;
     }

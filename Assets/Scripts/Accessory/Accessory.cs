@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class Accessory : MonoBehaviour
+public class Accessory : MonoBehaviour, IDraggable
 {
-    [SerializeField] DraggingController _draggingController;
+    [SerializeField] DraggableObject _draggableObject;
 
     // Core
 

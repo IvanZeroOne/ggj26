@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Accessory
   _draggableObject: {fileID: 234483514}
-  _attachable: {fileID: 234483512}
+  _collider: {fileID: 234830496}
 --- !u!4 &234483516
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Accessory
   _draggableObject: {fileID: 1416027896}
-  _attachable: {fileID: 1416027900}
+  _collider: {fileID: 263125560}
 --- !u!4 &1416027898
 Transform:
   m_ObjectHideFlags: 0

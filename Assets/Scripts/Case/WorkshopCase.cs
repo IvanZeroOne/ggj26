@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class WorkshopCase : MonoBehaviour, IAttachable
 {
-    [SerializeField] Attachable _attachable;
+    [SerializeField] Collider _collider;
     [SerializeField] Transform _caseVisuals;
+
+    // ---------- IAttachable ----------
+    public Collider Collider => _collider;
+    public Transform Transform => transform;
 
     public void AttachAttachment(AttachmentHolder holder)
     {
-        holder.AttachAttachment(_attachable);
+        holder.AttachAttachment(this);
     }
 
     public void FailedAttachment()
@@ -17,8 +21,8 @@ public class WorkshopCase : MonoBehaviour, IAttachable
 
     public void PositionAttachment(AttachmentHolder holder)
     {
-        Vector3 myPos = _attachable.transform.position;
-        Quaternion myRot = _attachable.transform.rotation;
+        Vector3 myPos = transform.position;
+        Quaternion myRot = transform.rotation;
 
         Vector3 otherPos = holder.transform.position;
         Quaternion otherRot = holder.transform.rotation;
@@ -26,15 +30,15 @@ public class WorkshopCase : MonoBehaviour, IAttachable
 
         const float skin = 0.01f;
 
-        _attachable.Collider.enabled = true;
+        _collider.enabled = true;
         if (Physics.ComputePenetration(
                 otherCol, otherPos, otherRot,
-                _attachable.Collider, myPos, myRot,
+                _collider, myPos, myRot,
                 out Vector3 dir, out float dist))
         {
             Vector3 delta = -dir * (dist + skin);
-            _attachable.transform.position += delta;
+            transform.position += delta;
         }
-        _attachable.Collider.enabled = false;
+        _collider.enabled = false;
     }
 }

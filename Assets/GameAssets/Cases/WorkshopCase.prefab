@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0bf5d13646489c9ea946329fc52ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkshopCase
-  _attachable: {fileID: 5492077255868947137}
+  _collider: {fileID: 5835167632112187861}
   _caseVisuals: {fileID: 8874544390832649519}
 --- !u!114 &5492077255868947137
 MonoBehaviour:

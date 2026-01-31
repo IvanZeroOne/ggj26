@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class Accessory : MonoBehaviour, IAttachable
 {
     [SerializeField] DraggableObject _draggableObject;
-    [SerializeField] Attachable _attachable;
+    [SerializeField] Collider _collider;
 
     void Start()
     {
@@ -12,6 +13,10 @@ public class Accessory : MonoBehaviour, IAttachable
         _draggableObject.DragStartedEvent += StartedDragging;
         _draggableObject.DragEndedEvent += EndedDragging;
     }
+
+    // ---------- IAttachable ----------
+    public Collider Collider => _collider;
+    public Transform Transform => transform;
 
     void StartedDragging()
     {
@@ -25,7 +30,7 @@ public class Accessory : MonoBehaviour, IAttachable
 
     public void AttachAttachment(AttachmentHolder holder)
     {
-        holder.AttachAttachment(_attachable);
+        holder.AttachAttachment(this);
     }
 
     public void FailedAttachment()
@@ -35,8 +40,8 @@ public class Accessory : MonoBehaviour, IAttachable
 
     public void PositionAttachment(AttachmentHolder holder)
     {
-        Vector3 myPos = _attachable.transform.position;
-        Quaternion myRot = _attachable.transform.rotation;
+        Vector3 myPos = transform.position;
+        Quaternion myRot = transform.rotation;
 
         Vector3 otherPos = holder.transform.position;
         Quaternion otherRot = holder.transform.rotation;
@@ -44,15 +49,15 @@ public class Accessory : MonoBehaviour, IAttachable
 
         const float skin = 0.01f;
 
-        _attachable.Collider.enabled = true;
+        _collider.enabled = true;
         if (Physics.ComputePenetration(
                 otherCol, otherPos, otherRot,
-                _attachable.Collider, myPos, myRot,
+                _collider, myPos, myRot,
                 out Vector3 dir, out float dist))
         {
             Vector3 delta = -dir * (dist + skin);
-            _attachable.transform.position += delta;
+            transform.position += delta;
         }
-        _attachable.Collider.enabled = false;
+        _collider.enabled = false;
     }
 }

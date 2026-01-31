@@ -1,27 +1,9 @@
 using UnityEngine;
 
-public class Accessory : MonoBehaviour, IAttachable
+public class WorkshopCase : MonoBehaviour, IAttachable
 {
-    [SerializeField] DraggableObject _draggableObject;
     [SerializeField] Attachable _attachable;
-
-    void Start()
-    {
-        _draggableObject.Init();
-
-        _draggableObject.DragStartedEvent += StartedDragging;
-        _draggableObject.DragEndedEvent += EndedDragging;
-    }
-
-    void StartedDragging()
-    {
-        Debug.Log("Started Dragging");
-    }
-
-    void EndedDragging()
-    {
-        Debug.Log("Ended Dragging");
-    }
+    [SerializeField] Transform _caseVisuals;
 
     public void AttachAttachment(AttachmentHolder holder)
     {

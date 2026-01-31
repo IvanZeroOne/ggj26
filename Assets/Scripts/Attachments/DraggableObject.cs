@@ -38,7 +38,7 @@ public class DraggableObject : MonoBehaviour
     {
         if (_attachable != null)
         {
-            bool positionedSuccessfully = PositionAttachable(pointerData, out AttachmentHolder holder);
+            bool positionedSuccessfully = PositionAttachable(pointerData, out IAttachmentHolder holder);
             if (positionedSuccessfully) _attachable.AttachAttachment(holder);
             else _attachable.FailedAttachment();
         }
@@ -53,7 +53,7 @@ public class DraggableObject : MonoBehaviour
         DragStepEvent?.Invoke(pointerData);
     }
 
-    bool PositionAttachable(PointerEventData pointerData, out AttachmentHolder holder)
+    bool PositionAttachable(PointerEventData pointerData, out IAttachmentHolder holder)
     {
         holder = null;
         if (_attachable == null) return false;

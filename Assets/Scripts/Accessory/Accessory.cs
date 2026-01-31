@@ -1,10 +1,10 @@
-using TMPro;
 using UnityEngine;
 
-public class Accessory : MonoBehaviour, IAttachable
+public class Accessory : MonoBehaviour, IAttachable, IAttachmentHolder
 {
     [SerializeField] DraggableObject _draggableObject;
     [SerializeField] Collider _collider;
+    [SerializeField] Transform _attachmentsHolder;
 
     void Start()
     {
@@ -17,6 +17,7 @@ public class Accessory : MonoBehaviour, IAttachable
     // ---------- IAttachable ----------
     public Collider Collider => _collider;
     public Transform Transform => transform;
+    public Transform AttachmentsHolder => _attachmentsHolder;
 
     void StartedDragging()
     {
@@ -28,7 +29,12 @@ public class Accessory : MonoBehaviour, IAttachable
         Debug.Log("Ended Dragging");
     }
 
-    public void AttachAttachment(AttachmentHolder holder)
+    public void AttachAttachment(IAttachable attachable)
+    {
+        attachable.Transform.SetParent(_attachmentsHolder);
+    }
+
+    public void AttachAttachment(IAttachmentHolder holder)
     {
         holder.AttachAttachment(this);
     }
@@ -38,13 +44,13 @@ public class Accessory : MonoBehaviour, IAttachable
         Destroy(gameObject);
     }
 
-    public void PositionAttachment(AttachmentHolder holder)
+    public void PositionAttachment(IAttachmentHolder holder)
     {
         Vector3 myPos = transform.position;
         Quaternion myRot = transform.rotation;
 
-        Vector3 otherPos = holder.transform.position;
-        Quaternion otherRot = holder.transform.rotation;
+        Vector3 otherPos = holder.Transform.position;
+        Quaternion otherRot = holder.Transform.rotation;
         Collider otherCol = holder.Collider;
 
         const float skin = 0.01f;

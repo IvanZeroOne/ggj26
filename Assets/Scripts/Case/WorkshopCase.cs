@@ -9,7 +9,7 @@ public class WorkshopCase : MonoBehaviour, IAttachable
     public Collider Collider => _collider;
     public Transform Transform => transform;
 
-    public void AttachAttachment(AttachmentHolder holder)
+    public void AttachAttachment(IAttachmentHolder holder)
     {
         holder.AttachAttachment(this);
     }
@@ -19,13 +19,13 @@ public class WorkshopCase : MonoBehaviour, IAttachable
         Destroy(gameObject);
     }
 
-    public void PositionAttachment(AttachmentHolder holder)
+    public void PositionAttachment(IAttachmentHolder holder)
     {
         Vector3 myPos = transform.position;
         Quaternion myRot = transform.rotation;
 
-        Vector3 otherPos = holder.transform.position;
-        Quaternion otherRot = holder.transform.rotation;
+        Vector3 otherPos = holder.Transform.position;
+        Quaternion otherRot = holder.Transform.rotation;
         Collider otherCol = holder.Collider;
 
         const float skin = 0.01f;

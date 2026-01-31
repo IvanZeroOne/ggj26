@@ -216,8 +216,6 @@ GameObject:
   - component: {fileID: 234483515}
   - component: {fileID: 234483514}
   - component: {fileID: 234483513}
-  - component: {fileID: 234483512}
-  - component: {fileID: 234483511}
   m_Layer: 0
   m_Name: Accessory (1)
   m_TagString: Untagged
@@ -225,33 +223,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &234483511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234483510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95405f1e7df42cea2b347286333bdd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttachmentHolder
-  _attachmentsHolder: {fileID: 237579814}
-  Collider: {fileID: 234830496}
---- !u!114 &234483512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234483510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f30d81af89a4349b060df2fa69f2894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attachable
-  Collider: {fileID: 234830496}
 --- !u!114 &234483513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Accessory
   _draggableObject: {fileID: 234483514}
   _collider: {fileID: 234830496}
+  _attachmentsHolder: {fileID: 237579814}
 --- !u!4 &234483516
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,8 +1196,6 @@ GameObject:
   - component: {fileID: 1416027897}
   - component: {fileID: 1416027896}
   - component: {fileID: 1416027895}
-  - component: {fileID: 1416027900}
-  - component: {fileID: 1416027899}
   m_Layer: 0
   m_Name: Accessory
   m_TagString: Untagged
@@ -1276,6 +1246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Accessory
   _draggableObject: {fileID: 1416027896}
   _collider: {fileID: 263125560}
+  _attachmentsHolder: {fileID: 283405560}
 --- !u!4 &1416027898
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,33 +1264,6 @@ Transform:
   - {fileID: 283405560}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1416027899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416027894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95405f1e7df42cea2b347286333bdd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttachmentHolder
-  _attachmentsHolder: {fileID: 283405560}
-  Collider: {fileID: 263125560}
---- !u!114 &1416027900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416027894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f30d81af89a4349b060df2fa69f2894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attachable
-  Collider: {fileID: 263125560}
 --- !u!1001 &5946309255024000502
 PrefabInstance:
   m_ObjectHideFlags: 0

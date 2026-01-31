@@ -7,4 +7,6 @@ public class PhoneVisuals : MonoBehaviour
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
     [SerializeField] Image _faceImage;
+
+    [SerializeField] Transform _caseHolder;
 }

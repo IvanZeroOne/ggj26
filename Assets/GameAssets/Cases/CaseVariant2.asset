@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fee0c15668e4b298fec8353ee2ac9d8, type: 3}
-  m_Name: CaseVariant1
+  m_Name: CaseVariant2
   m_EditorClassIdentifier: Assembly-CSharp::CaseVariantSO
-  CaseVisualPrefab: {fileID: 6162252056893366241, guid: e214484012bd947a996f8d80391b1935, type: 3}
+  CaseVisualPrefab: {fileID: 6162252056893366241, guid: 69fe7a0a260264a1296b46b2eedd330e, type: 3}

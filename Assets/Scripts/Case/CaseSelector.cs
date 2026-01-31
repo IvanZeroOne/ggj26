@@ -22,6 +22,7 @@ public class CaseSelector : MonoBehaviour
 
     void CaseClicked()
     {
+        Debug.Log("clicked");
         _controller.SelectCaseVariant(_caseVariantSO);
     }
 }

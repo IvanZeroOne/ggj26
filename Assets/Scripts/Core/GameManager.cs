@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        _phone.Init();
         _caseSelectorController.Init();
     }
 }

@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    void Move()
-    {
+    public DraggingController DraggingController { get; private set; }
 
+    public static GameManager Instance { get; private set; }
+
+    void Awake()
+    {
+        Instance = this;
+
+        DraggingController = new DraggingController();
     }
 }

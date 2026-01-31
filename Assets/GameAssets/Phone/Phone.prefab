@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8253660743831224484}
-  - component: {fileID: 4788011628419603198}
-  - component: {fileID: 7055207233090039200}
   m_Layer: 0
   m_Name: PhoneVisuals
   m_TagString: Untagged
@@ -34,40 +32,6 @@ Transform:
   - {fileID: 5593103497376856661}
   m_Father: {fileID: 8377928941093707656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4788011628419603198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235650462712251071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0189ec958ed6489aa116a632d9286e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhoneVisuals
-  _backgroundImage: {fileID: 7419231136845248721}
-  _wallpaperImage: {fileID: 9172784855211353635}
-  _faceImage: {fileID: 6252346447290934800}
-  _caseHolder: {fileID: 7805638935168815338}
---- !u!114 &7055207233090039200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235650462712251071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Outline
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1375557231829974834
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e0d4a4262b24dfb8276f5502935ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Phone
-  _phoneVisuals: {fileID: 4788011628419603198}
   _caseHolder: {fileID: 7805638935168815338}
+  _phoneAnimator: {fileID: 5786228729861546099}
+  _backgroundImage: {fileID: 7419231136845248721}
+  _wallpaperImage: {fileID: 9172784855211353635}
+  _faceImage: {fileID: 6252346447290934800}
+  _storedCaseVariantSO: {fileID: 11400000, guid: 0a7c9ce0c16cb4d76a0628f047e83ee9, type: 2}
+  _storedCasePatternVariantSO: {fileID: 11400000, guid: 2eb3348c88ed54ce8a87705a995cab9b, type: 2}
 --- !u!1 &1845188648254442865
 GameObject:
   m_ObjectHideFlags: 0

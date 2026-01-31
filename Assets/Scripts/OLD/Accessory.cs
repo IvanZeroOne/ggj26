@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public class Accessory : MonoBehaviour, IAttachable, IAttachmentHolder
@@ -67,3 +68,4 @@ public class Accessory : MonoBehaviour, IAttachable, IAttachmentHolder
         _collider.enabled = false;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public interface IAttachmentHolder
@@ -8,3 +9,4 @@ public interface IAttachmentHolder
 
     void AttachAttachment(IAttachable attachable);
 }
+*/

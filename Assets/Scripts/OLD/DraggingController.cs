@@ -1,3 +1,4 @@
+/*
 public class DraggingController
 {
     public DraggableObject DraggedObject { get; private set; }
@@ -12,3 +13,4 @@ public class DraggingController
         DraggedObject = null;
     }
 }
+*/

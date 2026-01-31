@@ -1,10 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static DraggingController DraggingController => Instance._draggingController;
-    DraggingController _draggingController;
+    //public static DraggingController DraggingController => Instance._draggingController;
+    //DraggingController _draggingController;
 
     [Header("Controllers")]
     [SerializeField] Phone _phone;
@@ -18,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        _draggingController = new DraggingController();
+        //_draggingController = new DraggingController();
     }
 
     void Start()
@@ -26,5 +25,7 @@ public class GameManager : MonoBehaviour
         _phone.Init();
         _caseSelectorController.Init();
         _casePatternSelectorController.Init();
+
+        _phone.SelectDefaultValues();
     }
 }

@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public class WorkshopCase : MonoBehaviour, IAttachable
@@ -42,3 +43,4 @@ public class WorkshopCase : MonoBehaviour, IAttachable
         _collider.enabled = false;
     }
 }
+*/

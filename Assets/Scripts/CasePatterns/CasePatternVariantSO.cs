@@ -5,5 +5,5 @@ using UnityEngine;
 public class CasePatternVariantSO : ScriptableObject
 {
     public Material Material;
-    public List<string> Response;
+    public GameObject PatternSelectorPrefab;
 }

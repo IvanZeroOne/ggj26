@@ -20,8 +20,8 @@ public class CasePatternSelectorController : MonoBehaviour
         }
     }
 
-    public void SelectCaseVariant(CaseVariantSO caseVariantSO)
+    public void SelectCasePatternVariant(CasePatternVariantSO casePatternVariantSO)
     {
-        GameManager.Phone.EquipCase(caseVariantSO);
+        GameManager.Phone.EquipPattern(casePatternVariantSO);
     }
 }

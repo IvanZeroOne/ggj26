@@ -4,12 +4,17 @@ using UnityEngine.UI;
 public class Phone : MonoBehaviour
 {
     [Header("Phone")]
-    [SerializeField] PhoneVisuals _phoneVisuals;
     [SerializeField] Transform _caseHolder;
+    [SerializeField] Animator _phoneAnimator;
     [Header("Phone Screen")]
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
     [SerializeField] Image _faceImage;
+    [Header("Default Values")]
+    [SerializeField] CaseVariantSO _storedCaseVariantSO;
+    [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
+
+    CaseVisuals _caseVisuals;
 
     public void Init()
     {
@@ -19,6 +24,19 @@ public class Phone : MonoBehaviour
     public void EquipCase(CaseVariantSO caseVariantSO)
     {
         _caseHolder.DestroyAllChildren();
-        Instantiate(caseVariantSO.CaseVisualPrefab, _caseHolder);
+        _caseVisuals = Instantiate(caseVariantSO.CaseVisualPrefab, _caseHolder);
+        _storedCaseVariantSO = caseVariantSO;
+        _caseVisuals.ChangeMaterial(_storedCasePatternVariantSO);
+    }
+
+    public void EquipPattern(CasePatternVariantSO casePatternVariantSO)
+    {
+        _caseVisuals.ChangeMaterial(casePatternVariantSO);
+        _storedCasePatternVariantSO = casePatternVariantSO;
+    }
+
+    public void SelectDefaultValues()
+    {
+        EquipCase(_storedCaseVariantSO);
     }
 }

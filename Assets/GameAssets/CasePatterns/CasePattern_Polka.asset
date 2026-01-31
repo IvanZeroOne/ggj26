@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5525ac379441642e7a557d8ce9d18f6d, type: 3}
   m_Name: CasePattern_Polka
   m_EditorClassIdentifier: Assembly-CSharp::CasePatternVariant
-  _material: {fileID: 2100000, guid: 359eabc9138ef6b7a970390207c0d2f1, type: 2}
+  Material: {fileID: 2100000, guid: 359eabc9138ef6b7a970390207c0d2f1, type: 2}
+  PatternSelectorPrefab: {fileID: 5973028850055593854, guid: d4600030386f7b64e9cf1029b29e5150, type: 3}

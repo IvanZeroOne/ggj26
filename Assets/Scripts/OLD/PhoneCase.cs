@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public class PhoneCase : MonoBehaviour, IAttachmentHolder
@@ -16,3 +17,4 @@ public class PhoneCase : MonoBehaviour, IAttachmentHolder
         attachable.Transform.SetParent(_attachmentsHolder);
     }
 }
+*/

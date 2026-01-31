@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CasePattern_Flowers
   m_EditorClassIdentifier: Assembly-CSharp::CasePatternVariant
   Material: {fileID: 2100000, guid: c23144e4becf8cbb78021be85bc1f47e, type: 2}
+  PatternSelectorPrefab: {fileID: 5973028850055593854, guid: 8011ce8af6f47ce489952c4a16e36100, type: 3}

@@ -9,9 +9,10 @@ public class CaseSelector : MonoBehaviour
 
     public void Init(CaseVariantSO caseVariantSO)
     {
-        _interactableObject.OnClick += CaseClicked;
         _caseVariantSO = caseVariantSO;
         SpawnVariant();
+
+        _interactableObject.OnClick += CaseClicked;
     }
 
     void SpawnVariant()

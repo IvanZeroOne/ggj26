@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5525ac379441642e7a557d8ce9d18f6d, type: 3}
   m_Name: CasePattern_Moon
   m_EditorClassIdentifier: Assembly-CSharp::CasePatternVariant
-  _material: {fileID: 2100000, guid: f0beec1f2097baee09bfcc9a07bbd9fb, type: 2}
+  Material: {fileID: 2100000, guid: f0beec1f2097baee09bfcc9a07bbd9fb, type: 2}
+  PatternSelectorPrefab: {fileID: 5973028850055593854, guid: 94198849bf8344b40ab96860d6ff9379, type: 3}

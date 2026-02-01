@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class Phone : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Phone : MonoBehaviour
     [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
     [SerializeField] List<StickerSO> _storedStickersSO;
     [SerializeField] List<AccessorySO> _storedAccessoriesSO;
+    [Header("Speech")]
+    [SerializeField] GameObject _bubble;
+    [SerializeField] TMP_Text _bubbleText;
 
     public Transform RotationTransform;
 
@@ -28,6 +32,7 @@ public class Phone : MonoBehaviour
         _caseHolder.DestroyAllChildren();
         _wallpaperImage.sprite = GameManager.CustomerController.CustomerSO.CustomerWallpaper;
         _backgroundImage.color = GameManager.CustomerController.CustomerSO.CustomerBackground;
+        _bubble.SetActive(false);
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)
@@ -135,4 +140,23 @@ public class Phone : MonoBehaviour
     {
         _phoneAnimator.SetTrigger(animName);
     }
+
+    #region Speech
+    Tween _speechTween;
+
+    public void Speak(string message, string animName)
+    {
+        _speechTween.Kill();
+        _bubble.SetActive(true);
+        _bubbleText.text = message;
+        SetAnim(animName);
+        _speechTween = DOVirtual.DelayedCall(3f, HideSpeak);
+    }
+
+    public void HideSpeak()
+    {
+        _bubble.SetActive(false);
+        SetAnim("Idle");
+    }
+    #endregion
 }

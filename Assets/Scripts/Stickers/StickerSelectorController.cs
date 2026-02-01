@@ -16,6 +16,7 @@ public class StickerSelectorController : MonoBehaviour
     public void SelectSticker(StickerSO stickerSO)
     {
         GameManager.CustomerController.Phone.EquipSticker(stickerSO);
+        Microlight.MicroAudio.MicroAudio.Sounds.PlaySound(GameManager.Instance.UIClicked);
         foreach (StickerSelector selector in _stickerSelectors)
         {
             selector.UpdateState();

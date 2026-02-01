@@ -1,4 +1,5 @@
 using UnityEngine;
+using Microlight.MicroAudio;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] AccessorySelectorController _accessorySelectorController;
 
     public static bool Interactable;
+
+    [Header("Sounds")]
+    public AudioClip DissatisfiedEnd;
+    public AudioClip SatisfiedEnd;
+    public AudioClip DoorOpen;
+    public AudioClip DoorClose;
+    public AudioClip Talking;
+    public AudioClip UIClicked;
+    public AudioClip AmbientMusic;
 
     public static GameManager Instance { get; private set; }
     public static CustomerController CustomerController => Instance._customerController;
@@ -34,5 +44,7 @@ public class GameManager : MonoBehaviour
         _accessorySelectorController.Init();
 
         _customerController.SpawnNextCustomer();
+
+        MicroAudio.Sounds.PlaySound(AmbientMusic);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Microlight.MicroAudio;
 using TMPro;
 
 public class Phone : MonoBehaviour
@@ -225,6 +226,7 @@ public class Phone : MonoBehaviour
             _positiveResponseCounter++;
             if(_positiveResponseCounter == GameManager.CustomerController.CustomerSO.PositiveLines.Count) _positiveResponseCounter = 0;
             _faceImage.sprite = _happyFaceSprite;
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.Talking);
         }
         else if (score < 0)
         {
@@ -232,6 +234,7 @@ public class Phone : MonoBehaviour
             _negativeResponseCounter++;
             if(_negativeResponseCounter == GameManager.CustomerController.CustomerSO.NegativeLines.Count) _negativeResponseCounter = 0;
             _faceImage.sprite = _sadFaceSprite;
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.Talking);
         }
     }
 

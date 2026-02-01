@@ -16,6 +16,7 @@ public class AccessorySelectorController : MonoBehaviour
     public void SelectAccessory(AccessorySO accessorySO)
     {
         GameManager.CustomerController.Phone.EquipAccessory(accessorySO);
+        Microlight.MicroAudio.MicroAudio.Sounds.PlaySound(GameManager.Instance.UIClicked);
         foreach (AccessorySelector selector in _accessorySelectors)
         {
             selector.UpdateState();

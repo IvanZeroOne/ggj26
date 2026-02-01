@@ -23,5 +23,6 @@ public class CasePatternSelectorController : MonoBehaviour
     public void SelectCasePatternVariant(CasePatternVariantSO casePatternVariantSO)
     {
         GameManager.CustomerController.Phone.EquipPattern(casePatternVariantSO);
+        Microlight.MicroAudio.MicroAudio.Sounds.PlaySound(GameManager.Instance.UIClicked);
     }
 }

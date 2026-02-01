@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-using Phone_1 = Phone;
+using Microlight.MicroAudio;
 
 public class CustomerController : MonoBehaviour
 {
@@ -50,7 +50,12 @@ public class CustomerController : MonoBehaviour
         Phone.SetAnim("Walk");
         Phone.MoveTo(_phoneTargetPosition, PhoneArrived, 1f);
         _enterDoorAnimator.SetTrigger("Open");
-        DOVirtual.DelayedCall(3f, () => { _enterDoorAnimator.SetTrigger("Close"); });
+        MicroAudio.Sounds.PlaySound(GameManager.Instance.DoorOpen);
+        DOVirtual.DelayedCall(3f, () =>
+        {
+            _enterDoorAnimator.SetTrigger("Close");
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.DoorClose);
+        });
     }
 
     void IamDone()
@@ -58,6 +63,7 @@ public class CustomerController : MonoBehaviour
         if(GameManager.Interactable == false) return;
 
         OutroSequence();
+        MicroAudio.Sounds.PlaySound(GameManager.Instance.UIClicked);
     }
 
     void OutroSequence()
@@ -68,10 +74,12 @@ public class CustomerController : MonoBehaviour
         if (score < 0)
         {
             Phone.Speak(customer.DissatisfiedEnd, "Negative");
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.DissatisfiedEnd);
         }
         else
         {
             Phone.Speak(customer.SatisfiedEnd, "Positive");
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.SatisfiedEnd);
         }
 
         DOVirtual.DelayedCall(3f, () =>
@@ -80,8 +88,16 @@ public class CustomerController : MonoBehaviour
             Phone.MoveTo(_phoneExitPosition, PhoneExited);
         });
 
-        DOVirtual.DelayedCall(4f, () => { _exitDoorAnimator.SetTrigger("Open"); });
-        DOVirtual.DelayedCall(7f, () => { _exitDoorAnimator.SetTrigger("Close"); });
+        DOVirtual.DelayedCall(4f, () =>
+        {
+            _exitDoorAnimator.SetTrigger("Open");
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.DoorOpen);
+        });
+        DOVirtual.DelayedCall(7f, () =>
+        {
+            _exitDoorAnimator.SetTrigger("Close");
+            MicroAudio.Sounds.PlaySound(GameManager.Instance.DoorClose);
+        });
     }
 
     void PhoneArrived()

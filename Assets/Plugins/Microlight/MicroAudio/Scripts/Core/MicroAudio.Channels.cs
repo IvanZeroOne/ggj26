@@ -1,4 +1,4 @@
-//#define LITE_MODE
+#define LITE_MODE
 //#define CUSTOM_MODE
 
 using System.Collections.Generic;

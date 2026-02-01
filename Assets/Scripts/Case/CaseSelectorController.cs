@@ -23,5 +23,6 @@ public class CaseSelectorController : MonoBehaviour
     public void SelectCaseVariant(CaseVariantSO caseVariantSO)
     {
         GameManager.CustomerController.Phone.EquipCase(caseVariantSO);
+        Microlight.MicroAudio.MicroAudio.Sounds.PlaySound(GameManager.Instance.UIClicked);
     }
 }

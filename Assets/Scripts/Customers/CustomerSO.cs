@@ -15,4 +15,6 @@ public class CustomerSO : ScriptableObject
     public List<CustomerAccessoryLikenessData> CustomerAccessoryLikenessData;
 
     public Sprite CustomerWallpaper;
+    public Color CustomerBackground;
+    public Color PhoneColor;
 }

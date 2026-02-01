@@ -80,6 +80,20 @@ public class Phone : MonoBehaviour
                 }
             }
         }
+
+        if (_storedStickersSO.Contains(stickerSO))
+        {
+            CustomerSO customer = GameManager.CustomerController.CustomerSO;
+            foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
+            {
+                if (likenessData.AccessoryID == stickerSO.StickerID)
+                {
+                    int score = likenessData.Rating;
+                    Response(score);
+                    break;
+                }
+            }
+        }
     }
 
     public void EquipAccessory(AccessorySO accessorySO)
@@ -103,6 +117,20 @@ public class Phone : MonoBehaviour
             else
             {
                 accessory.DisableAccessory();
+            }
+        }
+
+        if (_storedAccessoriesSO.Contains(accessorySO))
+        {
+            CustomerSO customer = GameManager.CustomerController.CustomerSO;
+            foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
+            {
+                if (likenessData.AccessoryID == accessorySO.AccessoryID)
+                {
+                    int score = likenessData.Rating;
+                    Response(score);
+                    break;
+                }
             }
         }
     }
@@ -138,16 +166,63 @@ public class Phone : MonoBehaviour
         _phoneAnimator.SetTrigger(animName);
     }
 
+    public int TotalRating()
+    {
+        CustomerSO customer = GameManager.CustomerController.CustomerSO;
+        int score = 0;
+        foreach (StickerSO sticker in _storedStickersSO)
+        {
+            foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
+            {
+                if (likenessData.AccessoryID == sticker.StickerID)
+                {
+                    score += likenessData.Rating;
+                    break;
+                }
+            }
+        }
+        foreach (AccessorySO accessory in _storedAccessoriesSO)
+        {
+            foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
+            {
+                if (likenessData.AccessoryID == accessory.AccessoryID)
+                {
+                    score += likenessData.Rating;
+                    break;
+                }
+            }
+        }
+        return score;
+    }
+
     #region Speech
     Tween _speechTween;
 
-    public void Speak(string message, string animName)
+    int _positiveResponseCounter;
+    int _negativeResponseCounter;
+    void Response(int score)
+    {
+        if (score > 0)
+        {
+            Speak(GameManager.CustomerController.CustomerSO.PositiveLines[_positiveResponseCounter], "Positive");
+            _positiveResponseCounter++;
+            if(_positiveResponseCounter == GameManager.CustomerController.CustomerSO.PositiveLines.Count) _positiveResponseCounter = 0;
+        }
+        else if (score < 0)
+        {
+            Speak(GameManager.CustomerController.CustomerSO.NegativeLines[_negativeResponseCounter], "Negative");
+            _negativeResponseCounter++;
+            if(_negativeResponseCounter == GameManager.CustomerController.CustomerSO.NegativeLines.Count) _negativeResponseCounter = 0;
+        }
+    }
+
+    public void Speak(string message, string animName, float speakDuration = 3f)
     {
         _speechTween.Kill();
         _bubble.SetActive(true);
         _bubbleText.text = message;
         SetAnim(animName);
-        _speechTween = DOVirtual.DelayedCall(3f, HideSpeak);
+        _speechTween = DOVirtual.DelayedCall(speakDuration, HideSpeak);
     }
 
     public void HideSpeak()

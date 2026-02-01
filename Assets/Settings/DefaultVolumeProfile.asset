@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   balance:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -0
 --- !u!114 &-8104416584915340131
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.307
+    m_Value: 0.458
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -379,9 +379,6 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
-  filter:
-    m_OverrideState: 1
-    m_Value: 0
   filter:
     m_OverrideState: 1
     m_Value: 0
@@ -876,7 +873,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.147
+    m_Value: 0.336
 --- !u!114 &6940869943325143175
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -933,7 +930,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.181
+    m_Value: 0.147
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1

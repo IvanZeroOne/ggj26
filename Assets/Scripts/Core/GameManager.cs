@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        _menu.SetActive(true);
         _phoneRotator.Init();
         _customerController.Init();
         _caseSelectorController.Init();

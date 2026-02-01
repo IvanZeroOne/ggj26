@@ -14,11 +14,15 @@ public class Phone : MonoBehaviour
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
     [SerializeField] Image _faceImage;
+    [Header("Faces")]
+    [SerializeField] Sprite _happyFaceSprite;
+    [SerializeField] Sprite _sadFaceSprite;
+    [SerializeField] Sprite _neutralFaceSprite;
     [Header("Default Values")]
     [SerializeField] CaseVariantSO _storedCaseVariantSO;
     [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
-    [SerializeField] List<StickerSO> _storedStickersSO;
-    [SerializeField] List<AccessorySO> _storedAccessoriesSO;
+    public List<StickerSO> StoredStickersSO;
+    public List<AccessorySO> StoredAccessoriesSO;
     [Header("Speech")]
     [SerializeField] GameObject _bubble;
     [SerializeField] TMP_Text _bubbleText;
@@ -33,6 +37,7 @@ public class Phone : MonoBehaviour
         _wallpaperImage.sprite = GameManager.CustomerController.CustomerSO.CustomerWallpaper;
         _backgroundImage.color = GameManager.CustomerController.CustomerSO.CustomerBackground;
         _bubble.SetActive(false);
+        _faceImage.sprite = _neutralFaceSprite;
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)
@@ -43,7 +48,7 @@ public class Phone : MonoBehaviour
         _caseVisuals.ChangeMaterial(_storedCasePatternVariantSO);
         foreach (StickerVisual stickerVisual in _caseVisuals.Stickers)
         {
-            if(_storedStickersSO.Contains(stickerVisual.StickerSO)) stickerVisual.EnableSticker();
+            if(StoredStickersSO.Contains(stickerVisual.StickerSO)) stickerVisual.EnableSticker();
             else stickerVisual.DisableSticker();
         }
     }
@@ -56,9 +61,9 @@ public class Phone : MonoBehaviour
 
     public void EquipSticker(StickerSO stickerSO)
     {
-        if (_storedStickersSO.Contains(stickerSO))
+        if (StoredStickersSO.Contains(stickerSO))
         {
-            _storedStickersSO.Remove(stickerSO);
+            StoredStickersSO.Remove(stickerSO);
             foreach (StickerVisual sticker in _caseVisuals.Stickers)
             {
                 if (sticker.StickerSO == stickerSO)
@@ -70,7 +75,7 @@ public class Phone : MonoBehaviour
         }
         else
         {
-            _storedStickersSO.Add(stickerSO);
+            StoredStickersSO.Add(stickerSO);
             foreach (StickerVisual sticker in _caseVisuals.Stickers)
             {
                 if (sticker.StickerSO == stickerSO)
@@ -81,7 +86,7 @@ public class Phone : MonoBehaviour
             }
         }
 
-        if (_storedStickersSO.Contains(stickerSO))
+        if (StoredStickersSO.Contains(stickerSO))
         {
             CustomerSO customer = GameManager.CustomerController.CustomerSO;
             foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
@@ -98,19 +103,19 @@ public class Phone : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
-        for (int i = 0; i < _storedAccessoriesSO.Count; i++)
+        for (int i = 0; i < StoredAccessoriesSO.Count; i++)
         {
-            if (_storedAccessoriesSO[i].AccessoryType == accessorySO.AccessoryType)
+            if (StoredAccessoriesSO[i].AccessoryType == accessorySO.AccessoryType)
             {
-                _storedAccessoriesSO.RemoveAt(i);
+                StoredAccessoriesSO.RemoveAt(i);
                 i--;
             }
         }
-        _storedAccessoriesSO.Add(accessorySO);
+        StoredAccessoriesSO.Add(accessorySO);
 
         foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
         {
-            if (_storedAccessoriesSO.Contains(accessory.AccessorySO))
+            if (StoredAccessoriesSO.Contains(accessory.AccessorySO))
             {
                 accessory.EnableAccessory();
             }
@@ -120,7 +125,7 @@ public class Phone : MonoBehaviour
             }
         }
 
-        if (_storedAccessoriesSO.Contains(accessorySO))
+        if (StoredAccessoriesSO.Contains(accessorySO))
         {
             CustomerSO customer = GameManager.CustomerController.CustomerSO;
             foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
@@ -170,7 +175,7 @@ public class Phone : MonoBehaviour
     {
         CustomerSO customer = GameManager.CustomerController.CustomerSO;
         int score = 0;
-        foreach (StickerSO sticker in _storedStickersSO)
+        foreach (StickerSO sticker in StoredStickersSO)
         {
             foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
             {
@@ -181,7 +186,7 @@ public class Phone : MonoBehaviour
                 }
             }
         }
-        foreach (AccessorySO accessory in _storedAccessoriesSO)
+        foreach (AccessorySO accessory in StoredAccessoriesSO)
         {
             foreach (CustomerAccessoryLikenessData likenessData in customer.CustomerAccessoryLikenessData)
             {
@@ -207,12 +212,14 @@ public class Phone : MonoBehaviour
             Speak(GameManager.CustomerController.CustomerSO.PositiveLines[_positiveResponseCounter], "Positive");
             _positiveResponseCounter++;
             if(_positiveResponseCounter == GameManager.CustomerController.CustomerSO.PositiveLines.Count) _positiveResponseCounter = 0;
+            _faceImage.sprite = _happyFaceSprite;
         }
         else if (score < 0)
         {
             Speak(GameManager.CustomerController.CustomerSO.NegativeLines[_negativeResponseCounter], "Negative");
             _negativeResponseCounter++;
             if(_negativeResponseCounter == GameManager.CustomerController.CustomerSO.NegativeLines.Count) _negativeResponseCounter = 0;
+            _faceImage.sprite = _sadFaceSprite;
         }
     }
 
@@ -229,6 +236,7 @@ public class Phone : MonoBehaviour
     {
         _bubble.SetActive(false);
         SetAnim("Idle");
+        _faceImage.sprite = _neutralFaceSprite;
     }
     #endregion
 }

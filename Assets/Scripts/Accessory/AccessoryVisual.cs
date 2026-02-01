@@ -9,7 +9,7 @@ public class AccessoryVisual : MonoBehaviour
     {
         if (AccessorySO.name != _model.name)
         {
-            Debug.LogError($"Model mismatch on {gameObject.name}");
+            //Debug.LogError($"Model mismatch on {gameObject.name}");
         }
     }
 

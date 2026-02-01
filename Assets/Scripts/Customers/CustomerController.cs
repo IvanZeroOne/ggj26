@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using Phone_1 = Phone;
 
 public class CustomerController : MonoBehaviour
 {
@@ -13,8 +14,11 @@ public class CustomerController : MonoBehaviour
     [Header("Intro")]
     [SerializeField] Animator _doorAnimator;
     [SerializeField] Transform _phoneTargetPosition;
+    [SerializeField] Transform _phoneExitPosition;
     [SerializeField] TMP_Text _phoneName;
     [SerializeField] Button _doneButton;
+    [SerializeField] Animator _enterDoorAnimator;
+    [SerializeField] Animator _exitDoorAnimator;
     public CustomerSO CustomerSO => _customers[_currentCustomerIndex];
     public Phone Phone { get; private set; }
 
@@ -24,6 +28,7 @@ public class CustomerController : MonoBehaviour
     {
         _customerHolder.DestroyAllChildren();
         _phoneTargetPosition.DestroyAllChildren();
+        _phoneExitPosition.DestroyAllChildren();
         _doneButton.onClick.AddListener(IamDone);
     }
 
@@ -43,17 +48,40 @@ public class CustomerController : MonoBehaviour
         GameManager.Interactable = false;
         _doorAnimator.SetTrigger("Open");
         Phone.SetAnim("Walk");
-        Phone.MoveTo(_phoneTargetPosition, PhoneArrived);
+        Phone.MoveTo(_phoneTargetPosition, PhoneArrived, 1f);
+        _enterDoorAnimator.SetTrigger("Open");
+        DOVirtual.DelayedCall(3f, () => { _enterDoorAnimator.SetTrigger("Close"); });
     }
 
     void IamDone()
     {
+        if(GameManager.Interactable == false) return;
+
         OutroSequence();
     }
 
     void OutroSequence()
     {
+        GameManager.Interactable = false;
+        int score = Phone.TotalRating();
+        CustomerSO customer = GameManager.CustomerController.CustomerSO;
+        if (score < 0)
+        {
+            Phone.Speak(customer.DissatisfiedEnd, "Negative");
+        }
+        else
+        {
+            Phone.Speak(customer.SatisfiedEnd, "Positive");
+        }
 
+        DOVirtual.DelayedCall(3f, () =>
+        {
+            Phone.SetAnim("Walk");
+            Phone.MoveTo(_phoneExitPosition, PhoneExited);
+        });
+
+        DOVirtual.DelayedCall(4f, () => { _exitDoorAnimator.SetTrigger("Open"); });
+        DOVirtual.DelayedCall(7f, () => { _exitDoorAnimator.SetTrigger("Close"); });
     }
 
     void PhoneArrived()
@@ -61,5 +89,10 @@ public class CustomerController : MonoBehaviour
         GameManager.Interactable = true;
         Phone.Speak(CustomerSO.IntroLine, "Talk");
         //Phone.SetAnim("Idle");
+    }
+
+    void PhoneExited()
+    {
+        SpawnNextCustomer();
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61bc77b54a784f70a75415dc4444f103, type: 3}
-  m_Name: ProteinAccessory
+  m_Name: AccessoryCat
   m_EditorClassIdentifier: Assembly-CSharp::AccessorySO
-  AccessoryID: protein
+  AccessoryID: catPendant1
   AccessoryPrefab: {fileID: 0}

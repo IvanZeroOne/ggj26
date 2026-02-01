@@ -997,7 +997,7 @@ MonoBehaviour:
   _caseSelectorController: {fileID: 914496233}
   _casePatternSelectorController: {fileID: 1787846414}
   _stickerSelectorController: {fileID: 828180900}
-  _accessorySelectorController: {fileID: 0}
+  _accessorySelectorController: {fileID: 1828025629}
 --- !u!1001 &632869326
 PrefabInstance:
   m_ObjectHideFlags: 0

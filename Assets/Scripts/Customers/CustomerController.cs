@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class CustomerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CustomerController : MonoBehaviour
     [Header("Intro")]
     [SerializeField] Animator _doorAnimator;
     [SerializeField] Transform _phoneTargetPosition;
+    [SerializeField] TMP_Text _phoneName;
     public CustomerSO CustomerSO => _customers[_currentCustomerIndex];
     public Phone Phone { get; private set; }
 
@@ -30,6 +32,7 @@ public class CustomerController : MonoBehaviour
         Phone.Init();
         Phone.SelectDefaultValues();
         IntroSequence();
+        _phoneName.text = CustomerSO.CharacterName;
     }
 
     void IntroSequence()

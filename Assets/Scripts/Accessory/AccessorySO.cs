@@ -4,5 +4,5 @@ using UnityEngine;
 public class AccessorySO : ScriptableObject
 {
     public string AccessoryID;
-    public GameObject AccessoryPrefab;
+    public string AccessoryType;
 }

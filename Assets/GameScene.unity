@@ -1010,13 +1010,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhonePrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 3433660566544075008, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.307
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_text
+      value: Don't you ever feel a call of nature? I love animals.
       objectReference: {fileID: 0}
-    - target: {fileID: 3433660566544075008, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.484
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_fontSize
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.x
+      value: 117.42697
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.y
+      value: 181.44147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.z
+      value: 150.79144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,10 +1072,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9167232707577157068, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
-      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

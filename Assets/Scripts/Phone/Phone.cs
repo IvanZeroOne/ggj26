@@ -84,28 +84,25 @@ public class Phone : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
-        if (_storedAccessoriesSO.Contains(accessorySO))
+        for (int i = 0; i < _storedAccessoriesSO.Count; i++)
         {
-            _storedAccessoriesSO.Remove(accessorySO);
-            foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
+            if (_storedAccessoriesSO[i].AccessoryType == accessorySO.AccessoryType)
             {
-                if (accessory.AccessorySO == accessorySO)
-                {
-                    accessory.DisableAccessory();
-                    break;
-                }
+                _storedAccessoriesSO.RemoveAt(i);
+                i--;
             }
         }
-        else
+        _storedAccessoriesSO.Add(accessorySO);
+
+        foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
         {
-            _storedAccessoriesSO.Add(accessorySO);
-            foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
+            if (_storedAccessoriesSO.Contains(accessory.AccessorySO))
             {
-                if (accessory.AccessorySO == accessorySO)
-                {
-                    accessory.EnableAccessory();
-                    break;
-                }
+                accessory.EnableAccessory();
+            }
+            else
+            {
+                accessory.DisableAccessory();
             }
         }
     }

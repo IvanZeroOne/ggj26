@@ -774,6 +774,7 @@ Transform:
   m_Children:
   - {fileID: 1845424596}
   - {fileID: 178672903}
+  - {fileID: 599132687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &498824775
@@ -903,6 +904,38 @@ MonoBehaviour:
   _casePatternSelectorController: {fileID: 1787846414}
   _stickerSelectorController: {fileID: 1425891904}
   _accessorySelectorController: {fileID: 1828025629}
+--- !u!1 &599132686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599132687}
+  m_Layer: 0
+  m_Name: PhoneExitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &599132687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599132686}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.993, y: 0.772, z: 0.391}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1336992623}
+  m_Father: {fileID: 450851131}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &632869326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1903,6 +1936,92 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5791786826870336037, guid: fb5fb15e5b07ce4a8a6aa6d2f3e54204, type: 3}
   m_PrefabInstance: {fileID: 1216958020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1336992622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 599132687}
+    m_Modifications:
+    - target: {fileID: 1542746317262500855, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_Name
+      value: PhonePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_text
+      value: Don't you ever feel a call of nature? I love animals.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_fontSize
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.x
+      value: 117.42697
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.y
+      value: 181.44147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_margin.z
+      value: 150.79144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869328446519722847, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+--- !u!4 &1336992623 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8377928941093707656, guid: 17bbb7a4fc0564346ac03d43c45c53b0, type: 3}
+  m_PrefabInstance: {fileID: 1336992622}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1382579026 stripped
 Transform:

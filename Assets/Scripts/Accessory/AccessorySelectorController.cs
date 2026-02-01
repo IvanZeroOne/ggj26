@@ -16,5 +16,9 @@ public class AccessorySelectorController : MonoBehaviour
     public void SelectAccessory(AccessorySO accessorySO)
     {
         GameManager.CustomerController.Phone.EquipAccessory(accessorySO);
+        foreach (AccessorySelector selector in _accessorySelectors)
+        {
+            selector.UpdateState();
+        }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AccessoryKnife
   m_EditorClassIdentifier: Assembly-CSharp::AccessorySO
   AccessoryID: knifePendant
-  AccessoryPrefab: {fileID: 0}
+  AccessoryType: pendant

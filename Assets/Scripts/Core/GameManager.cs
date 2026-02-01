@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CaseSelectorController _caseSelectorController;
     [SerializeField] CasePatternSelectorController _casePatternSelectorController;
     [SerializeField] StickerSelectorController _stickerSelectorController;
+    [SerializeField] AccessorySelectorController _accessorySelectorController;
 
     public static bool Interactable;
 
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         _caseSelectorController.Init();
         _casePatternSelectorController.Init();
         _stickerSelectorController.Init();
+        _accessorySelectorController.Init();
 
         _customerController.SpawnNextCustomer();
     }

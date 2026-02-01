@@ -27,6 +27,7 @@ public class Phone : MonoBehaviour
     {
         _caseHolder.DestroyAllChildren();
         _wallpaperImage.sprite = GameManager.CustomerController.CustomerSO.CustomerWallpaper;
+        _backgroundImage.color = GameManager.CustomerController.CustomerSO.CustomerBackground;
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)

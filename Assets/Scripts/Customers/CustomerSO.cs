@@ -12,4 +12,5 @@ public class CustomerSO : ScriptableObject
     public string SatisfiedEnd;
     public string DissatisfiedEnd;
     public string NeutralEnd;
+    public List<CustomerAccessoryLikenessData> CustomerAccessoryLikenessData;
 }

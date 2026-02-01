@@ -266,6 +266,7 @@ MonoBehaviour:
   _interactableObject: {fileID: 6417245406147483638}
   _modelHolder: {fileID: 3818224501591170236}
   _controller: {fileID: 0}
+  _caseVisuals: {fileID: 7509278876434172420}
   _selectedGO: {fileID: 1055656616444966532}
   _hoveredGO: {fileID: 960166037165079925}
 --- !u!114 &6417245406147483638
@@ -367,3 +368,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3916295491650726371, guid: e214484012bd947a996f8d80391b1935, type: 3}
   m_PrefabInstance: {fileID: 4445869507071219173}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7509278876434172420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6162252056893366241, guid: e214484012bd947a996f8d80391b1935, type: 3}
+  m_PrefabInstance: {fileID: 4445869507071219173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283b91098ff84bbc8c4cfa624e746de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CaseVisuals

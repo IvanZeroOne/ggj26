@@ -19,4 +19,17 @@ public class CaseVisuals : MonoBehaviour
     {
         _renderer.material = casePatternVariantSO.Material;
     }
+
+    public void DisableAllAccessoriesAndStickers()
+    {
+        foreach (AccessoryVisual accessory in Accessories)
+        {
+            accessory.DisableAccessory();
+        }
+
+        foreach (StickerVisual sticker in Stickers)
+        {
+            sticker.DisableSticker();
+        }
+    }
 }

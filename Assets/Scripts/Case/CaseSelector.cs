@@ -6,6 +6,7 @@ public class CaseSelector : MonoBehaviour
     [SerializeField] InteractableObject _interactableObject;
     [SerializeField] Transform _modelHolder;
     [SerializeField] CaseSelectorController _controller;
+    [SerializeField] CaseVisuals _caseVisuals;
     CaseVariantSO _caseVariantSO;
 
     [Header("Selector")]
@@ -21,6 +22,7 @@ public class CaseSelector : MonoBehaviour
         SpawnVariant();
 
         _interactableObject.OnClick += CaseClicked;
+        _caseVisuals.DisableAllAccessoriesAndStickers();
     }
 
     void Update()

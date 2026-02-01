@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: _controller
       value: 
       objectReference: {fileID: 8285649110257959391}
+    - target: {fileID: 5292841697618145931, guid: 9b2f704e2ce4b65499570a429a07d1e4, type: 3}
+      propertyPath: _caseVisuals
+      value: 
+      objectReference: {fileID: 8489495163176061885}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8022759032152500891, guid: 9b2f704e2ce4b65499570a429a07d1e4, type: 3}
@@ -197,6 +201,10 @@ PrefabInstance:
       propertyPath: _controller
       value: 
       objectReference: {fileID: 8285649110257959391}
+    - target: {fileID: 5292841697618145931, guid: 9b2f704e2ce4b65499570a429a07d1e4, type: 3}
+      propertyPath: _caseVisuals
+      value: 
+      objectReference: {fileID: 7987180436205293299}
     - target: {fileID: 6792976923273822607, guid: 9b2f704e2ce4b65499570a429a07d1e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00000019464642
@@ -361,6 +369,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3916295491650726371, guid: 69fe7a0a260264a1296b46b2eedd330e, type: 3}
   m_PrefabInstance: {fileID: 2329497111563670620}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8489495163176061885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6162252056893366241, guid: 69fe7a0a260264a1296b46b2eedd330e, type: 3}
+  m_PrefabInstance: {fileID: 2329497111563670620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283b91098ff84bbc8c4cfa624e746de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CaseVisuals
 --- !u!1001 &3150306620506704017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,3 +591,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3916295491650726371, guid: ca995c49d11df432780073da260af789, type: 3}
   m_PrefabInstance: {fileID: 4277467267932606738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7987180436205293299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6162252056893366241, guid: ca995c49d11df432780073da260af789, type: 3}
+  m_PrefabInstance: {fileID: 4277467267932606738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283b91098ff84bbc8c4cfa624e746de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CaseVisuals

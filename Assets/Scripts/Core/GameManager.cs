@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Phone _phone;
     [SerializeField] CaseSelectorController _caseSelectorController;
     [SerializeField] CasePatternSelectorController _casePatternSelectorController;
+    [SerializeField] StickerSelectorController _stickerSelectorController;
 
     public static Phone Phone => Instance._phone;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         _phone.Init();
         _caseSelectorController.Init();
         _casePatternSelectorController.Init();
+        _stickerSelectorController.Init();
 
         _phone.SelectDefaultValues();
     }

@@ -31,6 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4519106281133011520}
+  - {fileID: 7270483057898933023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6162252056893366241
@@ -46,6 +47,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaseVisuals
   _renderer: {fileID: 1414461692064194236}
+  Stickers:
+  - {fileID: 9057233530843801223}
+  - {fileID: 2089021700579917792}
+--- !u!1001 &1871366049630975843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3916295491650726371}
+    m_Modifications:
+    - target: {fileID: 988117836628364110, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_Name
+      value: StickerPositions
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+--- !u!114 &2089021700579917792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 361941270603434115, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 1871366049630975843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!4 &7270483057898933023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 1871366049630975843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9057233530843801223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7226496645897736676, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 1871366049630975843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
 --- !u!1001 &3268238843814069451
 PrefabInstance:
   m_ObjectHideFlags: 0

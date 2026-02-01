@@ -5,6 +5,11 @@ using UnityEngine;
 public class CharacterSO : ScriptableObject
 {
     public string CharacterName;
+    public string IntroLine;
+    public string NoCosmeticsLine;
     public List<string> PositiveLines;
     public List<string> NegativeLines;
+    public string SatisfiedEnd;
+    public string DissatisfiedEnd;
+    public string NeutralEnd;
 }

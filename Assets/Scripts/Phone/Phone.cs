@@ -17,6 +17,7 @@ public class Phone : MonoBehaviour
     [SerializeField] CaseVariantSO _storedCaseVariantSO;
     [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
     [SerializeField] List<StickerSO> _storedStickersSO;
+    [SerializeField] List<AccessorySO> _storedAccessoriesSO;
 
     public Transform RotationTransform;
 
@@ -68,6 +69,34 @@ public class Phone : MonoBehaviour
                 if (sticker.StickerSO == stickerSO)
                 {
                     sticker.EnableSticker();
+                    break;
+                }
+            }
+        }
+    }
+
+    public void EquipAccessory(AccessorySO accessorySO)
+    {
+        if (_storedAccessoriesSO.Contains(accessorySO))
+        {
+            _storedAccessoriesSO.Remove(accessorySO);
+            foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
+            {
+                if (accessory.AccessorySO == accessorySO)
+                {
+                    accessory.DisableAccessory();
+                    break;
+                }
+            }
+        }
+        else
+        {
+            _storedAccessoriesSO.Add(accessorySO);
+            foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
+            {
+                if (accessory.AccessorySO == accessorySO)
+                {
+                    accessory.EnableAccessory();
                     break;
                 }
             }

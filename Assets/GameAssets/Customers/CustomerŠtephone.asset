@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4869b57edfa4d5c826d9c886a4f3b2f, type: 3}
   m_Name: "Customer\u0160tephone"
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
-  CharacterName: "\u0160tephone"
+  CharacterName: "\u0160tephon"
   IntroLine: Im out of touch? Back in my days we had buttons!
   NoCosmeticsLine: Give an old chap like me a fresh lick of paint!
   PositiveLines:
@@ -27,6 +27,28 @@ MonoBehaviour:
   DissatisfiedEnd: Maybe my time has really run its course....
   NeutralEnd: A case doesn't make a phone in the end.
   CustomerAccessoryLikenessData:
-  - AccessoryID: 
+  - AccessoryID: dollar
     Rating: 0
+  - AccessoryID: gymShoes
+    Rating: -1
+  - AccessoryID: hearts
+    Rating: 1
+  - AccessoryID: joint
+    Rating: -1
+  - AccessoryID: peaceSign
+    Rating: 1
+  - AccessoryID: bowtie
+    Rating: -1
+  - AccessoryID: catPendant1
+    Rating: 1
+  - AccessoryID: chain
+    Rating: -1
+  - AccessoryID: hat
+    Rating: 1
+  - AccessoryID: knifePendant
+    Rating: -1
+  - AccessoryID: slippers
+    Rating: 1
+  - AccessoryID: teeth
+    Rating: 1
   CustomerWallpaper: {fileID: 21300000, guid: ec14c2bf08e6c25489caa9c4c8024c3d, type: 3}

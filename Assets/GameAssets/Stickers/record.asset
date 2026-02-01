@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245fb9a4ba9841ae8e5e275cfc2b2195, type: 3}
   m_Name: record
   m_EditorClassIdentifier: Assembly-CSharp::StickerSO
-  StickerID: rat
-  StickerSprite: {fileID: 21300000, guid: c882928719dd7ab44b1ec5c005767f2b, type: 3}
+  StickerID: record
+  StickerSprite: {fileID: 21300000, guid: 92090978efa3a48fa9ca80bdf25246b9, type: 3}

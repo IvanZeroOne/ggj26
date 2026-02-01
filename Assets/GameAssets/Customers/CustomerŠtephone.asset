@@ -26,3 +26,6 @@ MonoBehaviour:
   SatisfiedEnd: If she saw me now, thank you youngster!
   DissatisfiedEnd: Maybe my time has really run its course....
   NeutralEnd: A case doesn't make a phone in the end.
+  CustomerAccessoryLikenessData:
+  - AccessoryID: 
+    Rating: 0

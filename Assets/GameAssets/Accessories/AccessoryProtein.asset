@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AccessoryProtein
   m_EditorClassIdentifier: Assembly-CSharp::AccessorySO
   AccessoryID: protein
-  AccessoryPrefab: {fileID: 0}
+  AccessoryType: pendant

@@ -43,6 +43,7 @@ public class CustomerController : MonoBehaviour
     void PhoneArrived()
     {
         GameManager.Interactable = true;
-        Phone.SetAnim("Idle");
+        Phone.Speak(CustomerSO.IntroLine, "Talk");
+        //Phone.SetAnim("Idle");
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AccessoryCat
   m_EditorClassIdentifier: Assembly-CSharp::AccessorySO
   AccessoryID: catPendant1
-  AccessoryPrefab: {fileID: 0}
+  AccessoryType: pendant

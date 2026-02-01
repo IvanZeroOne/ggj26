@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4869b57edfa4d5c826d9c886a4f3b2f, type: 3}
+  m_Name: CustomerTiphony
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  CharacterName: Tiphony
+  IntroLine: Give me, like, something that will make me like super hot. I need to
+    find myself a provider.
+  NoCosmeticsLine: Uhmmm can you like, do something?
+  PositiveLines:
+  - This really shows my libra side.
+  - Gives cosmic vibes.
+  - Uhmm, yeah, awesome much?
+  NegativeLines:
+  - Uhmm, I'm not a gemini, SMH.
+  - That gives like, no signal, ew.
+  - Uhm, are you not listening?
+  SatisfiedEnd: Wow, I feel like you get me.
+  DissatisfiedEnd: I would be better off wearing just a screen protector.
+  NeutralEnd: Uhm, it's fine.

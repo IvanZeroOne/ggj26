@@ -22,7 +22,6 @@ public class CaseSelector : MonoBehaviour
         SpawnVariant();
 
         _interactableObject.OnClick += CaseClicked;
-        _caseVisuals.DisableAllAccessoriesAndStickers();
     }
 
     void Update()
@@ -33,7 +32,8 @@ public class CaseSelector : MonoBehaviour
     void SpawnVariant()
     {
         _modelHolder.DestroyAllChildren();
-        Instantiate(_caseVariantSO.CaseVisualPrefab, _modelHolder);
+        CaseVisuals spawnedObject = Instantiate(_caseVariantSO.CaseVisualPrefab, _modelHolder);
+        spawnedObject.DisableAllAccessoriesAndStickers();
     }
 
     void CaseClicked()

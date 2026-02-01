@@ -1,13 +1,14 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Phone : MonoBehaviour
 {
     [Header("Phone")]
     [SerializeField] Transform _caseHolder;
     [SerializeField] Animator _phoneAnimator;
-    [SerializeField] PhoneRotator _phoneRotator;
     [Header("Phone Screen")]
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
@@ -17,12 +18,13 @@ public class Phone : MonoBehaviour
     [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
     [SerializeField] List<StickerSO> _storedStickersSO;
 
+    public Transform RotationTransform;
+
     CaseVisuals _caseVisuals;
 
     public void Init()
     {
         _caseHolder.DestroyAllChildren();
-        _phoneRotator.Init();
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)
@@ -75,5 +77,31 @@ public class Phone : MonoBehaviour
     public void SelectDefaultValues()
     {
         EquipCase(_storedCaseVariantSO);
+    }
+
+    public void MoveTo(Transform moveToTransform, Action onArrived)
+    {
+        Vector3[] path = new[]
+        {
+            transform.position,
+            moveToTransform.position
+        };
+
+        transform.DOKill();
+        transform.DOPath(path, 0.8f, PathType.CatmullRom)
+            .SetSpeedBased(true)
+            .SetLookAt(0f)
+            .SetEase(Ease.Linear)
+            .SetOptions(AxisConstraint.None, AxisConstraint.X | AxisConstraint.Z)
+            .OnComplete(() =>
+            {
+                transform.rotation = moveToTransform.rotation;
+                onArrived?.Invoke();
+            });
+    }
+
+    public void SetAnim(string animName)
+    {
+        _phoneAnimator.SetTrigger(animName);
     }
 }

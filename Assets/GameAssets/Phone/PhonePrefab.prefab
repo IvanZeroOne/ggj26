@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8377928941093707656}
   - component: {fileID: 404460604053062409}
   m_Layer: 0
-  m_Name: Phone
+  m_Name: PhonePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,8 +132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542746317262500855}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.006, y: 0.867, z: 0.22}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -154,13 +154,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Phone
   _caseHolder: {fileID: 7805638935168815338}
   _phoneAnimator: {fileID: 5786228729861546099}
-  _phoneRotator: {fileID: 0}
   _backgroundImage: {fileID: 7419231136845248721}
   _wallpaperImage: {fileID: 9172784855211353635}
   _faceImage: {fileID: 6252346447290934800}
   _storedCaseVariantSO: {fileID: 11400000, guid: 0a7c9ce0c16cb4d76a0628f047e83ee9, type: 2}
   _storedCasePatternVariantSO: {fileID: 11400000, guid: 2eb3348c88ed54ce8a87705a995cab9b, type: 2}
   _storedStickersSO: []
+  RotationTransform: {fileID: 8253660743831224484}
 --- !u!1 &1845188648254442865
 GameObject:
   m_ObjectHideFlags: 0

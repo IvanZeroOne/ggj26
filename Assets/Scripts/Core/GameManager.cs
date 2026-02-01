@@ -6,15 +6,16 @@ public class GameManager : MonoBehaviour
     //DraggingController _draggingController;
 
     [Header("Controllers")]
-    [SerializeField] Phone _phone;
+    [SerializeField] PhoneRotator _phoneRotator;
+    [SerializeField] CustomerController _customerController;
     [SerializeField] CaseSelectorController _caseSelectorController;
     [SerializeField] CasePatternSelectorController _casePatternSelectorController;
     [SerializeField] StickerSelectorController _stickerSelectorController;
 
-    public static Phone Phone => Instance._phone;
     public static bool Interactable;
 
     public static GameManager Instance { get; private set; }
+    public static CustomerController CustomerController => Instance._customerController;
 
     void Awake()
     {
@@ -24,11 +25,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _phone.Init();
+        _phoneRotator.Init();
+        _customerController.Init();
         _caseSelectorController.Init();
         _casePatternSelectorController.Init();
         _stickerSelectorController.Init();
 
-        _phone.SelectDefaultValues();
+        _customerController.SpawnNextCustomer();
     }
 }

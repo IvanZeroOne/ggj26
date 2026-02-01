@@ -22,6 +22,6 @@ public class CaseSelectorController : MonoBehaviour
 
     public void SelectCaseVariant(CaseVariantSO caseVariantSO)
     {
-        GameManager.Phone.EquipCase(caseVariantSO);
+        GameManager.CustomerController.Phone.EquipCase(caseVariantSO);
     }
 }

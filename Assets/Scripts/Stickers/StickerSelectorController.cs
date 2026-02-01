@@ -15,6 +15,6 @@ public class StickerSelectorController : MonoBehaviour
 
     public void SelectSticker(StickerSO stickerSO)
     {
-        GameManager.Phone.EquipSticker(stickerSO);
+        GameManager.CustomerController.Phone.EquipSticker(stickerSO);
     }
 }

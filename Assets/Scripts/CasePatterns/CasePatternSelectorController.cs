@@ -22,6 +22,6 @@ public class CasePatternSelectorController : MonoBehaviour
 
     public void SelectCasePatternVariant(CasePatternVariantSO casePatternVariantSO)
     {
-        GameManager.Phone.EquipPattern(casePatternVariantSO);
+        GameManager.CustomerController.Phone.EquipPattern(casePatternVariantSO);
     }
 }

@@ -14,6 +14,10 @@ public class Phone : MonoBehaviour
     [SerializeField] Image _backgroundImage;
     [SerializeField] Image _wallpaperImage;
     [SerializeField] Image _faceImage;
+    [Header("Faces")]
+    [SerializeField] Sprite _happyFaceSprite;
+    [SerializeField] Sprite _sadFaceSprite;
+    [SerializeField] Sprite _neutralFaceSprite;
     [Header("Default Values")]
     [SerializeField] CaseVariantSO _storedCaseVariantSO;
     [SerializeField] CasePatternVariantSO _storedCasePatternVariantSO;
@@ -33,6 +37,7 @@ public class Phone : MonoBehaviour
         _wallpaperImage.sprite = GameManager.CustomerController.CustomerSO.CustomerWallpaper;
         _backgroundImage.color = GameManager.CustomerController.CustomerSO.CustomerBackground;
         _bubble.SetActive(false);
+        _faceImage.sprite = _neutralFaceSprite;
     }
 
     public void EquipCase(CaseVariantSO caseVariantSO)
@@ -207,12 +212,14 @@ public class Phone : MonoBehaviour
             Speak(GameManager.CustomerController.CustomerSO.PositiveLines[_positiveResponseCounter], "Positive");
             _positiveResponseCounter++;
             if(_positiveResponseCounter == GameManager.CustomerController.CustomerSO.PositiveLines.Count) _positiveResponseCounter = 0;
+            _faceImage.sprite = _happyFaceSprite;
         }
         else if (score < 0)
         {
             Speak(GameManager.CustomerController.CustomerSO.NegativeLines[_negativeResponseCounter], "Negative");
             _negativeResponseCounter++;
             if(_negativeResponseCounter == GameManager.CustomerController.CustomerSO.NegativeLines.Count) _negativeResponseCounter = 0;
+            _faceImage.sprite = _sadFaceSprite;
         }
     }
 
@@ -229,6 +236,7 @@ public class Phone : MonoBehaviour
     {
         _bubble.SetActive(false);
         SetAnim("Idle");
+        _faceImage.sprite = _neutralFaceSprite;
     }
     #endregion
 }

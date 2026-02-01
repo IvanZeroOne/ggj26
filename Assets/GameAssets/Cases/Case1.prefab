@@ -51,6 +51,15 @@ MonoBehaviour:
   Stickers:
   - {fileID: 1149310164697640608}
   - {fileID: 7980194109327030215}
+  - {fileID: 7018911552703070400}
+  - {fileID: 7294031401304767760}
+  - {fileID: 9208909804834922156}
+  - {fileID: 4371262927948841849}
+  - {fileID: 2574285964906539375}
+  - {fileID: 8844412441255806364}
+  - {fileID: 4537366288493229505}
+  - {fileID: 5089641911090486095}
+  - {fileID: 116423648086928455}
   Accessories:
   - {fileID: 7717224901637141545}
 --- !u!1001 &2933529261273830668
@@ -270,6 +279,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+--- !u!114 &116423648086928455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7649110361641587459, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
 --- !u!114 &1149310164697640608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7226496645897736676, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
@@ -286,9 +306,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9015533912909495420, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
   m_PrefabInstance: {fileID: 7762666338409332548}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2574285964906539375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5189049032265307691, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &4371262927948841849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6274463782550682685, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &4537366288493229505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6146693798651857541, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &5089641911090486095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3249502927508218891, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &7018911552703070400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 779871737465913220, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &7294031401304767760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1045711432732475988, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
 --- !u!114 &7980194109327030215 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 361941270603434115, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &8844412441255806364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1226999629415725784, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
+  m_PrefabInstance: {fileID: 7762666338409332548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a828a270964a538222eb9e367d67db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StickerVisual
+--- !u!114 &9208909804834922156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1474393713211417064, guid: 9e7334ff9e2f17f47af20e39726f0079, type: 3}
   m_PrefabInstance: {fileID: 7762666338409332548}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

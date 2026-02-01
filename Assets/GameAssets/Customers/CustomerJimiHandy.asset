@@ -26,3 +26,5 @@ MonoBehaviour:
   SatisfiedEnd: We are SO connected. Yah.
   DissatisfiedEnd: Too modern, ugh.
   NeutralEnd: I can use this for some time.
+  CustomerAccessoryLikenessData: []
+  CustomerWallpaper: {fileID: 21300000, guid: 6cdb5d5b4d3c56348b9356b50d94d834, type: 3}

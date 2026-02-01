@@ -26,3 +26,5 @@ MonoBehaviour:
   SatisfiedEnd: Prettier than a damsel in distress!
   DissatisfiedEnd: Me lads will make me walk the plank...
   NeutralEnd: Aye, my mistress the sea has naught eyes to see anways.
+  CustomerAccessoryLikenessData: []
+  CustomerWallpaper: {fileID: 21300000, guid: 794f938caf0c1154ea9d1ccf2009776b, type: 3}

@@ -27,3 +27,5 @@ MonoBehaviour:
   SatisfiedEnd: Wow, I feel like you get me.
   DissatisfiedEnd: I would be better off wearing just a screen protector.
   NeutralEnd: Uhm, it's fine.
+  CustomerAccessoryLikenessData: []
+  CustomerWallpaper: {fileID: 21300000, guid: fedb58a724613074ca8bd5593abbb55f, type: 3}

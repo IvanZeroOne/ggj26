@@ -757,6 +757,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c6596982f6c78947aab9aa4935f2a85, type: 2}
   _doorAnimator: {fileID: 179793145}
   _phoneTargetPosition: {fileID: 178672903}
+  _phoneExitPosition: {fileID: 599132687}
   _phoneName: {fileID: 788738155}
   _doneButton: {fileID: 1187294769}
 --- !u!4 &450851131

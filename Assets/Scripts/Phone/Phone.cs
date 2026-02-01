@@ -54,6 +54,11 @@ public class Phone : MonoBehaviour
             if(StoredStickersSO.Contains(stickerVisual.StickerSO)) stickerVisual.EnableSticker();
             else stickerVisual.DisableSticker();
         }
+        foreach (AccessoryVisual accessoryVisual in _caseVisuals.Accessories)
+        {
+            if(StoredAccessoriesSO.Contains(accessoryVisual.AccessorySO)) accessoryVisual.EnableAccessory();
+            else accessoryVisual.DisableAccessory();
+        }
     }
 
     public void EquipPattern(CasePatternVariantSO casePatternVariantSO)
@@ -106,6 +111,7 @@ public class Phone : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
+        bool contained = StoredAccessoriesSO.Contains(accessorySO);
         for (int i = 0; i < StoredAccessoriesSO.Count; i++)
         {
             if (StoredAccessoriesSO[i].AccessoryType == accessorySO.AccessoryType)
@@ -114,7 +120,10 @@ public class Phone : MonoBehaviour
                 i--;
             }
         }
-        StoredAccessoriesSO.Add(accessorySO);
+        if (contained == false)
+        {
+            StoredAccessoriesSO.Add(accessorySO);
+        }
 
         foreach (AccessoryVisual accessory in _caseVisuals.Accessories)
         {

@@ -754,6 +754,7 @@ MonoBehaviour:
   _doorAnimator: {fileID: 179793145}
   _phoneTargetPosition: {fileID: 178672903}
   _phoneName: {fileID: 788738155}
+  _doneButton: {fileID: 1187294769}
 --- !u!4 &450851131
 Transform:
   m_ObjectHideFlags: 0

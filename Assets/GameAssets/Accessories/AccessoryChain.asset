@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AccessoryChain
   m_EditorClassIdentifier: Assembly-CSharp::AccessorySO
   AccessoryID: chain
-  AccessoryPrefab: {fileID: 0}
+  AccessoryType: pendant

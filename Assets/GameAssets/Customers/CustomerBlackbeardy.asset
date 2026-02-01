@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4869b57edfa4d5c826d9c886a4f3b2f, type: 3}
+  m_Name: CustomerBlackbeardy
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  CharacterName: Blackbeardy
+  IntroLine: Give me a case. A case full o' GOLD Yerhahaw!
+  NoCosmeticsLine: A chest must represent what it holds!
+  PositiveLines:
+  - HYERHAHAW
+  - Aye, they will fear my sword.
+  - This will signal to all, I am the most Ultra+ out there.
+  NegativeLines:
+  - I say nay!
+  - Call me a naysayer, 'cause I say nay AGAIN!
+  - AAUUR NAAAUR, ugly as a sea rat.
+  SatisfiedEnd: Prettier than a damsel in distress!
+  DissatisfiedEnd: Me lads will make me walk the plank...
+  NeutralEnd: Aye, my mistress the sea has naught eyes to see anways.

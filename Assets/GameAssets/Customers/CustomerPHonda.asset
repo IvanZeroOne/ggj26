@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4869b57edfa4d5c826d9c886a4f3b2f, type: 3}
+  m_Name: CustomerPHonda
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  CharacterName: P. Honda
+  IntroLine: Ride or die! Callhala is reserved for the sleek, NOT WEAK.
+  NoCosmeticsLine: A case with no accessories is like a bike with no wheels.
+  PositiveLines:
+  - Wind in my antenna and style in the trunk.
+  - I smoke whatever you are cooking.
+  - This goes so hard Im gonna brick up.
+  NegativeLines:
+  - Get off my case, man!
+  - What the fuck?
+  - I SAID WHAT THE FUCK?
+  SatisfiedEnd: I got so much drip I'm gonna fry.
+  DissatisfiedEnd: This makes me look like my ware is soft.
+  NeutralEnd: At least it will keep me safe from draft.

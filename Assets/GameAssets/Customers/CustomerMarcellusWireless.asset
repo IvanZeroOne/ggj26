@@ -50,3 +50,5 @@ MonoBehaviour:
   - AccessoryID: teeth
     Rating: -1
   CustomerWallpaper: {fileID: 21300000, guid: dc2493c8e4cb283479672f9f3d9bc212, type: 3}
+  CustomerBackground: {r: 0.64705884, g: 0.6509804, b: 1, a: 1}
+  PhoneColor: {r: 0, g: 0, b: 0, a: 0}

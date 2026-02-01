@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Microlight.MicroAudio;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] CasePatternSelectorController _casePatternSelectorController;
     [SerializeField] StickerSelectorController _stickerSelectorController;
     [SerializeField] AccessorySelectorController _accessorySelectorController;
+
+    [Header("MainMenu")]
+    [SerializeField] Button _quitButton;
+    [SerializeField] Button _playButton;
+    [SerializeField] GameObject _menu;
 
     public static bool Interactable;
 
@@ -43,8 +49,24 @@ public class GameManager : MonoBehaviour
         _stickerSelectorController.Init();
         _accessorySelectorController.Init();
 
-        _customerController.SpawnNextCustomer();
+        _playButton.onClick.AddListener(Play);
+        _quitButton.onClick.AddListener(Quit);
 
-        MicroAudio.Sounds.PlaySound(AmbientMusic);
+        MicroAudio.Sounds.PlaySound(AmbientMusic, loop: true);
+    }
+
+    void Play()
+    {
+        _menu.SetActive(false);
+        _customerController.SpawnNextCustomer();
+    }
+
+    void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }

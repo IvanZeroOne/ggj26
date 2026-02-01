@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 
@@ -13,6 +14,7 @@ public class CustomerController : MonoBehaviour
     [SerializeField] Animator _doorAnimator;
     [SerializeField] Transform _phoneTargetPosition;
     [SerializeField] TMP_Text _phoneName;
+    [SerializeField] Button _doneButton;
     public CustomerSO CustomerSO => _customers[_currentCustomerIndex];
     public Phone Phone { get; private set; }
 
@@ -22,6 +24,7 @@ public class CustomerController : MonoBehaviour
     {
         _customerHolder.DestroyAllChildren();
         _phoneTargetPosition.DestroyAllChildren();
+        _doneButton.onClick.AddListener(IamDone);
     }
 
     public void SpawnNextCustomer()
@@ -41,6 +44,16 @@ public class CustomerController : MonoBehaviour
         _doorAnimator.SetTrigger("Open");
         Phone.SetAnim("Walk");
         Phone.MoveTo(_phoneTargetPosition, PhoneArrived);
+    }
+
+    void IamDone()
+    {
+        OutroSequence();
+    }
+
+    void OutroSequence()
+    {
+
     }
 
     void PhoneArrived()

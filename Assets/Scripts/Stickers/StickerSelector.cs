@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StickerSelector : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class StickerSelector : MonoBehaviour
     [SerializeField] GameObject _selectedGO;
     [SerializeField] GameObject _hoveredGO;
 
+    Camera _camera;
+
     public void Init()
     {
         if (_stickerSO.StickerSprite != _spriteRenderer.sprite)
@@ -18,6 +21,12 @@ public class StickerSelector : MonoBehaviour
         }
         _interactableObject.OnClick += StickerClicked;
         _interactableObject.OnHoverChanged += UpdateState;
+        _camera = Camera.main;
+        UpdateState();
+    }
+
+    void Update()
+    {
         UpdateState();
     }
 
@@ -42,7 +51,18 @@ public class StickerSelector : MonoBehaviour
         else
         {
             _selectedGO.SetActive(false);
-            _hoveredGO.SetActive(_interactableObject.Hovered);
+            Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.collider.TryGetComponent(out StickerSelector selector) && selector == this)
+                {
+                    _hoveredGO.SetActive(true);
+                    return;
+                }
+            }
+
+            _hoveredGO.SetActive(false);
         }
     }
 }

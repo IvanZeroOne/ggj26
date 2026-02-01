@@ -10,14 +10,14 @@ public class CasePatternSelector : MonoBehaviour
     public void Init(CasePatternVariantSO casePatternVariantSO)
     {
         _casePatternVariantSO = casePatternVariantSO;
-        SpawnVariant();
+        //SpawnVariant();
         _interactableObject.OnClick += CaseClicked;
     }
 
     void SpawnVariant()
     {
-        _modelHolder.DestroyAllChildren();
-        Instantiate(_casePatternVariantSO.PatternSelectorPrefab, _modelHolder);
+        //_modelHolder.DestroyAllChildren();
+        //Instantiate(_casePatternVariantSO.PatternSelectorPrefab, _modelHolder);
     }
 
     void CaseClicked()

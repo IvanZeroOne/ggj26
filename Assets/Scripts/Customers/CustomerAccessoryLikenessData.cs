@@ -1,3 +1,4 @@
+[System.Serializable]
 public class CustomerAccessoryLikenessData
 {
     public string AccessoryID;

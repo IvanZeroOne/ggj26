@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5525ac379441642e7a557d8ce9d18f6d, type: 3}
+  m_Name: CasePattern_Leather
+  m_EditorClassIdentifier: Assembly-CSharp::CasePatternVariant
+  Material: {fileID: 2100000, guid: 5631dae2effc8ae90a1e11bf7d3682cf, type: 2}
+  PatternSelectorPrefab: {fileID: 5973028850055593854, guid: d4600030386f7b64e9cf1029b29e5150, type: 3}

@@ -50,6 +50,7 @@ MonoBehaviour:
   Stickers:
   - {fileID: 1149310164697640608}
   - {fileID: 7980194109327030215}
+  Accessories: []
 --- !u!1001 &2933529261273830668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ PrefabInstance:
     - target: {fileID: -4368662815716892885, guid: 4ffc2c323bff39599ba7c669b1cec06d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 359eabc9138ef6b7a970390207c0d2f1, type: 2}
+      objectReference: {fileID: 7438632088983809487, guid: 74b1ca63fda289fc892e5a25cbf0bb4a, type: 3}
     - target: {fileID: 2940684619718070468, guid: 4ffc2c323bff39599ba7c669b1cec06d, type: 3}
       propertyPath: m_Name
       value: mask_01

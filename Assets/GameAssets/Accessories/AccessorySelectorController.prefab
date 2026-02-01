@@ -566,22 +566,6 @@ PrefabInstance:
       propertyPath: _controller
       value: 
       objectReference: {fileID: 8579426093124703498}
-    - target: {fileID: 2751693291798985217, guid: 92e83211b306d4349aa5e5bf6ce35497, type: 3}
-      propertyPath: _accessorySO
-      value: 
-      objectReference: {fileID: 11400000, guid: 7669594ee3b64a490b82fc5fb606bb92, type: 2}
-    - target: {fileID: 3444123858518272751, guid: 92e83211b306d4349aa5e5bf6ce35497, type: 3}
-      propertyPath: m_Size.x
-      value: 18.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3444123858518272751, guid: 92e83211b306d4349aa5e5bf6ce35497, type: 3}
-      propertyPath: m_Size.y
-      value: 64.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3444123858518272751, guid: 92e83211b306d4349aa5e5bf6ce35497, type: 3}
-      propertyPath: m_Size.z
-      value: 19.4
-      objectReference: {fileID: 0}
     - target: {fileID: 8326259127246886796, guid: 92e83211b306d4349aa5e5bf6ce35497, type: 3}
       propertyPath: m_LocalPosition.x
       value: -68.3

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CaseSelector : MonoBehaviour
 {
@@ -7,12 +8,24 @@ public class CaseSelector : MonoBehaviour
     [SerializeField] CaseSelectorController _controller;
     CaseVariantSO _caseVariantSO;
 
+    [Header("Selector")]
+    [SerializeField] GameObject _selectedGO;
+    [SerializeField] GameObject _hoveredGO;
+
+    Camera _camera;
+
     public void Init(CaseVariantSO caseVariantSO)
     {
+        _camera = Camera.main;
         _caseVariantSO = caseVariantSO;
         SpawnVariant();
 
         _interactableObject.OnClick += CaseClicked;
+    }
+
+    void Update()
+    {
+        UpdateState();
     }
 
     void SpawnVariant()
@@ -24,5 +37,36 @@ public class CaseSelector : MonoBehaviour
     void CaseClicked()
     {
         _controller.SelectCaseVariant(_caseVariantSO);
+    }
+
+    public void UpdateState()
+    {
+        if (GameManager.CustomerController.Phone == null)
+        {
+            _selectedGO.SetActive(false);
+            _hoveredGO.SetActive(false);
+            return;
+        }
+        if(GameManager.CustomerController.Phone.StoredCaseVariant == _caseVariantSO)
+        {
+            _selectedGO.SetActive(true);
+            _hoveredGO.SetActive(false);
+        }
+        else
+        {
+            _selectedGO.SetActive(false);
+            Ray ray = _camera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.collider.TryGetComponent(out CaseSelector selector) && selector == this)
+                {
+                    _hoveredGO.SetActive(true);
+                    return;
+                }
+            }
+
+            _hoveredGO.SetActive(false);
+        }
     }
 }

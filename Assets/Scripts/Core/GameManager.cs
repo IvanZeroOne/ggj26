@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] StickerSelectorController _stickerSelectorController;
 
     public static Phone Phone => Instance._phone;
+    public static bool Interactable;
 
     public static GameManager Instance { get; private set; }
 

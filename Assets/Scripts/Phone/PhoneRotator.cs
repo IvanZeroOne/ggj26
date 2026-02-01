@@ -32,6 +32,7 @@ public class PhoneRotator : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void OnBeginDrag(PointerEventData pointerData)
     {
+        if(GameManager.Interactable == false) return;
         _pointerPreviousPos = pointerData.position;
         _dragStartPointerX = pointerData.position.x;
         _dragStartPhoneRotation = _phoneRotationTransform.localRotation;
@@ -39,6 +40,7 @@ public class PhoneRotator : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void OnDrag(PointerEventData pointerData)
     {
+        if(GameManager.Interactable == false) return;
         // Rotate phone based on how much of the screen width has been dragged (X axis).
         // 30% of screen width => 180 degrees, scaled linearly (e.g. 15% => 90 degrees).
         float screenWidth = Screen.width;
@@ -58,6 +60,7 @@ public class PhoneRotator : MonoBehaviour, IBeginDragHandler, IDragHandler, IPoi
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if(GameManager.Interactable == false) return;
         Ray ray = _camera.ScreenPointToRay(eventData.position);
         RaycastHit[] hits = Physics.RaycastAll(ray);
         Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));

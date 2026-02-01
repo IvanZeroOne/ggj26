@@ -751,6 +751,10 @@ MonoBehaviour:
   _customers:
   - {fileID: 11400000, guid: 52e606a23ab5748c19f41041c7b57f99, type: 2}
   - {fileID: 11400000, guid: a70930a1c61c82f448adda14c7fed228, type: 2}
+  - {fileID: 11400000, guid: ce2fdcfcc07678f4fb53ea4941c8361f, type: 2}
+  - {fileID: 11400000, guid: 2271089b124c46e41aabd2a58bb0be94, type: 2}
+  - {fileID: 11400000, guid: 951924002e29faa4c8f0fd98c29531db, type: 2}
+  - {fileID: 11400000, guid: 3c6596982f6c78947aab9aa4935f2a85, type: 2}
   _doorAnimator: {fileID: 179793145}
   _phoneTargetPosition: {fileID: 178672903}
   _phoneName: {fileID: 788738155}

@@ -27,6 +27,9 @@ public class Phone : MonoBehaviour
     [SerializeField] GameObject _bubble;
     [SerializeField] TMP_Text _bubbleText;
 
+    public CaseVariantSO StoredCaseVariant => _storedCaseVariantSO;
+    public CasePatternVariantSO StoredCasePatternVariant => _storedCasePatternVariantSO;
+
     public Transform RotationTransform;
 
     CaseVisuals _caseVisuals;

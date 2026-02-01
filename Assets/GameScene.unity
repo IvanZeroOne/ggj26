@@ -2546,30 +2546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AccessorySelectorController
       objectReference: {fileID: 0}
-    - target: {fileID: 8579426093124703498, guid: 5e97ca65aed554ef89f41b34077a41dd, type: 3}
-      propertyPath: _accessorySelectors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579426093124703498, guid: 5e97ca65aed554ef89f41b34077a41dd, type: 3}
-      propertyPath: '_accessorySelectors.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2293489567095235972}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e97ca65aed554ef89f41b34077a41dd, type: 3}
---- !u!114 &2293489567095235972 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4888022981169397627, guid: 5e97ca65aed554ef89f41b34077a41dd, type: 3}
-  m_PrefabInstance: {fileID: 2293489567095235971}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a1bae08b2234a838e07c5c6d7f044fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccessorySelector
 --- !u!1001 &6786674682803499411
 PrefabInstance:
   m_ObjectHideFlags: 0

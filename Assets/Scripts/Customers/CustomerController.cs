@@ -17,6 +17,8 @@ public class CustomerController : MonoBehaviour
     [SerializeField] Transform _phoneExitPosition;
     [SerializeField] TMP_Text _phoneName;
     [SerializeField] Button _doneButton;
+    [SerializeField] Animator _enterDoorAnimator;
+    [SerializeField] Animator _exitDoorAnimator;
     public CustomerSO CustomerSO => _customers[_currentCustomerIndex];
     public Phone Phone { get; private set; }
 
@@ -46,7 +48,9 @@ public class CustomerController : MonoBehaviour
         GameManager.Interactable = false;
         _doorAnimator.SetTrigger("Open");
         Phone.SetAnim("Walk");
-        Phone.MoveTo(_phoneTargetPosition, PhoneArrived);
+        Phone.MoveTo(_phoneTargetPosition, PhoneArrived, 1f);
+        _enterDoorAnimator.SetTrigger("Open");
+        DOVirtual.DelayedCall(3f, () => { _enterDoorAnimator.SetTrigger("Close"); });
     }
 
     void IamDone()
@@ -72,8 +76,12 @@ public class CustomerController : MonoBehaviour
 
         DOVirtual.DelayedCall(3f, () =>
         {
+            Phone.SetAnim("Walk");
             Phone.MoveTo(_phoneExitPosition, PhoneExited);
         });
+
+        DOVirtual.DelayedCall(4f, () => { _exitDoorAnimator.SetTrigger("Open"); });
+        DOVirtual.DelayedCall(7f, () => { _exitDoorAnimator.SetTrigger("Close"); });
     }
 
     void PhoneArrived()

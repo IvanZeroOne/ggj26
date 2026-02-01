@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &58355508 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3236308827035215428, guid: 7fe4e0e1d46ec4180b6bc2d0447de708, type: 3}
+  m_PrefabInstance: {fileID: 158400485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &158400485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,6 +765,8 @@ MonoBehaviour:
   _phoneExitPosition: {fileID: 599132687}
   _phoneName: {fileID: 788738155}
   _doneButton: {fileID: 1187294769}
+  _enterDoorAnimator: {fileID: 179793145}
+  _exitDoorAnimator: {fileID: 58355508}
 --- !u!4 &450851131
 Transform:
   m_ObjectHideFlags: 0
@@ -2327,7 +2334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Done
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d642ab2fc31814675b2cd89f436b63a5, type: 2}
   m_sharedMaterial: {fileID: 4208683616757054398, guid: d642ab2fc31814675b2cd89f436b63a5, type: 2}

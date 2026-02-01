@@ -157,7 +157,7 @@ public class Phone : MonoBehaviour
         EquipCase(_storedCaseVariantSO);
     }
 
-    public void MoveTo(Transform moveToTransform, Action onArrived)
+    public void MoveTo(Transform moveToTransform, Action onArrived, float delay = 0f)
     {
         Vector3[] path = new[]
         {
@@ -175,7 +175,7 @@ public class Phone : MonoBehaviour
             {
                 transform.rotation = moveToTransform.rotation;
                 onArrived?.Invoke();
-            });
+            }).SetDelay(delay);
     }
 
     public void SetAnim(string animName)

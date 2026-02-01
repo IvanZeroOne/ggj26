@@ -26,3 +26,5 @@ MonoBehaviour:
   SatisfiedEnd: Lookin, like a thousand units.
   DissatisfiedEnd: What am I, net negative?
   NeutralEnd: Whatever man, peace.
+  CustomerAccessoryLikenessData: []
+  CustomerWallpaper: {fileID: 21300000, guid: dc2493c8e4cb283479672f9f3d9bc212, type: 3}

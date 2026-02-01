@@ -26,3 +26,5 @@ MonoBehaviour:
   SatisfiedEnd: I got so much drip I'm gonna fry.
   DissatisfiedEnd: This makes me look like my ware is soft.
   NeutralEnd: At least it will keep me safe from draft.
+  CustomerAccessoryLikenessData: []
+  CustomerWallpaper: {fileID: 21300000, guid: 56598a29a3b1b9d41ae269a01115fdb3, type: 3}

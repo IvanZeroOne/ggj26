@@ -13,4 +13,6 @@ public class CustomerSO : ScriptableObject
     public string DissatisfiedEnd;
     public string NeutralEnd;
     public List<CustomerAccessoryLikenessData> CustomerAccessoryLikenessData;
+
+    public Sprite CustomerWallpaper;
 }
